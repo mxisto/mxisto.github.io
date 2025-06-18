@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <html lang="">
+    <meta charset="utf-8">
+    <title>Systems of Equations</title>
+    <link rel="stylesheet" type="text/css" href="../stylesheets/main.css">
+    <meta name="viewport" content=
+    "width=device-width, initial-scale=1.0">
+   
+    <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  </head>
+<body>
+<p><a href="../index.html"> <----- Back to Index</a></p>
+
+<h1>Systems of Equations / Simultaneous Equations</h1>
+<p>It's a set of equations that have more than one incognito, in which is necessary to find the values that meet the requirements from all equations.</p>
+
+<div class="mathbox">
+<h2>1st Method: Replacement</h2>
+<p>Consists of choosing one of the equations and isolate the incognito to determinate it's value in relation to the other equation.</p>
+<p>With that, the 2nd equation will be left with a single incognito and so we can find it's final value.</p>
+<p><b>Example:</b> Solve the following System of Equations</p>
+$$\begin{cases}x+y=12\\3x-y=20\end{cases}$$
+<p>Isolating the x on the first equation:</p>
+$$\begin{cases}x=12-y\\3x-y=20\end{cases}$$
+<p>so with x being equal to $$12-y$$ we can replace it on the second equation:</p>
+$$3(12-y)-y=20$$
+$$36-3y-y=20$$
+$$-4y=20-36$$
+$$4y=16$$
+$$y=\frac{16}{4}$$
+$$y=4$$
+<p>finding y, we can replace the value on the first equation:</p>
+$$x+4=12$$
+$$x=12-4$$
+$$x=8$$
+<p>In this case, the result turns both equations true, since $$8+4=12$$ and $$3*8-4=20$$</p>
+<p>Finally, the result can be represented as:</p>
+$$(8,4)$$
+</div>
+
+<div class="mathbox">
+<h2>2nd Method: Addition</h2>
+<p>Here we join both equations into one, eliminating one of the incognitos.</p>
+<p>For this it is necessary that the coefficients of the incognitos have <b>the same value and opposing signs.</b></p>
+<h3>With opposing signs:</h3>
+$$\begin{cases}x+y=12\\3x-y=20\end{cases}$$
+<p>In this case we already have this requirement met (+y on the first equation and -y on the second), with that we eliminate both y and sum the remaining values:</p>
+$$\frac{\begin{cases}x=12\\3x=20\end{cases}}{4x=32}$$
+$$x=\frac{32}{4}$$
+$$x=8$$
+<p>finding x we can now solve the equation and find y:</p>
+$$8+y=12$$
+$$y=12-8$$
+$$y=4$$
+<p>The result is the same of the first method:</p>
+$$(8,4)$$
+<h3>Without opposing signs:</h3>
+<p>When the coefficients are not opposed, is necessary to multiply them by a number that transforms the coefficient in a opposing number to the other equation:</p>
+<p><b>Example:</b></p>
+$$\begin{cases}3x+y=24\\5x+2y=60\end{cases}$$
+<p>In this case, since we cannot eliminate one of the incognitos, we need to multiply one equation by a number that transforms the coefficient into a opposite number from the other equation's coefficient. For example, we can try multiplying it to -2:</p>
+$$\begin{cases}3x+y=24\:(*-2)\\5x+2y=60\end{cases}=\begin{cases}-6x-2y=-48\\5x+2y=60\end{cases}$$
+$$\frac{\begin{cases}-6x-2y=-48\\5x+2y=60\end{cases}}{-1x=12}$$
+<p>now we can do the rest like the other example:</p>
+$$x=-12$$
+$$-6(-12)-2y=-48$$
+$$72-2y=-48$$
+$$-2y=-48-72$$
+$$-2y=-120$$
+$$y=\frac{120}{2}$$
+$$y=60$$
+<p>The result can be written as:</p>
+$$(-12,60)$$
+</div>
+
+<div class="mathbox">
+<h2>More than two equations</h2>
+<p>This topic can become more confusing when we add a third equation into the mix:</p>
+<p><b>Example:</b></p>
+$$\begin{cases}3a+2b+5c=15\\7a-3b+2c=52\\5a+b-4c=2\end{cases}$$
+<p>In this case we can do two separate Systems of Equations: one with the first and second equation, and another one with the second and third. With that <b>the result of both systems will be used to make a new one.</b></p>
+<p>separating the system into two:</p>
+$$\begin{cases}3a+2b+5c=15\\7a-3b+2c=52\end{cases}\:\begin{cases}7a-3b+2c=52\\5a+b-4c=2\end{cases}$$
+<p><b>First system:</b></p>
+$$\begin{cases}3a+2b+5c=15\:(*2)\\7a-3b+2c=52\:(*5)\end{cases}=\begin{cases}6a+4b+10c=30\\-35a+15b-10c=-260\end{cases}$$
+<p>With a third incognito, we focus in eliminate c first:</p>
+$$\frac{\begin{cases}6a+4b=30\\-35a+15b=-260\end{cases}}{-29a+19b=-230}$$
+<p><b>Second system:</b></p>
+<p>we do the same as in the first one:</p>
+$$\begin{cases}7a-3b+2c=52\:(*2)\\5a+b-4c=2\:(*1)\end{cases}=\begin{cases}14a-6b+4c=104\\5a+b-4c=2\end{cases}$$
+$$\frac{\begin{cases}14a-6b+4c=104\\5a+b-4c=2\end{cases}}{19a-5b=106}$$
+<p>With that, we have two new equations, these can be solved in a new system to find a, b and consequentially c :</p>
+<p><b>Third system</b></p>
+$$\begin{cases}-29a+19b=-230\\19a-5b=106\end{cases}$$
+$$\begin{cases}-29a+19b=-230\:(*5)\\19a-5b=106\:(*19)\end{cases}=\begin{cases}-145a+95b=1150\\361a-95b=2014\end{cases}$$
+$$\frac{\begin{cases}-145a+95b=1150\\361a-95b=2014\end{cases}}{216a=864}$$
+$$a=\frac{864}{216}$$
+$$a=4$$
+<p>replacing a in any equation in this third system, we have:</p>
+$$19(4)-5b=106$$
+$$76-5b=106$$
+$$-5b=106-76$$
+$$b=\frac{30}{-5}$$
+$$b=-6$$
+<p>in this case we use one of the first equations to find c :</p>
+$$3(4)+2(-6)+5c=15$$
+$$12-12+5c=15$$
+$$c=\frac{15}{5}$$
+$$c=3$$
+<p>The result can be read as:</p>
+$$(4,-6.3)$$
+</div>
+
+<div class="mathbox">
+<h2>Graphical Representation</h2>
+<p>We can also represent a equation system in a Cartesian Plane.</p>
+$$\begin{cases}x+y=4\\x-y=2\end{cases}$$
+<p>In each equation, we can attribute two values to one of the incognitos and then calculate the correspondent values to the other incognito, so that we obtain ordered pairs:</p>
+<hr align="center" size="5" width="50%">
+
+$$x+y=4$$
+<table style="font-size: 15px;">
+<tr style="background-color: #dddddd;color: black;">
+	<td>x</td>
+	<td>y</td>
+	<td>(x,y)</td>
+</tr>
+<tr>
+	<td>1</td>
+	<td>3</td>
+	<td>(1,3)</td>
+</tr>
+<tr>
+	<td>2</td>
+	<td>2</td>
+	<td>(2,2)</td>
+</tr>
+</table>
+
+<p></p>
+
+$$x-y=2$$
+<table style="font-size: 15px;">
+<tr style="background-color: #dddddd;color: black;">
+	<td>x</td>
+	<td>y</td>
+	<td>(x,y)</td>
+</tr>
+<tr>
+	<td>1</td>
+	<td>-1</td>
+	<td>(1,-1)</td>
+</tr>
+<tr>
+	<td>2</td>
+	<td>0</td>
+	<td>(2,0)</td>
+</tr>
+</table>
+
+<p>With that, we can insert these points in the Cartesian Plane:</p>
+
+<img src="../images/math/eqt_sys_ggb1.png" width="815" height="622">
+<p></p>
+<a href="../files/geogebra/eqt_sys1.ggb" download="eqt_sys1.ggb">
+    <button type="button">Download this graph (.ggb)</button>
+</a>
+
+<p>By inserting the ordered pair resulted from the equation system on a graphical dynamic geometrical tool (in this case Geogebra), we can see that the point where both equations cross is actually the ordered pair that is the solution to this system.</p>
+
+</div>
+
+<hr align="center" size="5" width="50%">
+
+<h3>Resources:</h3>
+
+<li>💻 🇧🇷 GOUVEIA, Rosimar. Sistemas de Equações. Toda Matéria, [s.d.]. Disponível em: https://www.todamateria.com.br/sistemas-de-equacoes/. Acesso em: 10 fev. 2025</li>
+
+<li>📚 🇧🇷 Spiegel, Murray Ralph. Estatística: resumo da teoria, 875 problemas resolvidos, 619 problemas propostos (1971). From the original <i>Schaums Outline of Theory and Problems</i></li>
+
+<li>📚 🇧🇷 Oliveira, Carlos n.C. de | Fujita, Felipe. Geração Alpha - Matemática: 8º ano (2022)</li>
+
+</body>
+</html>

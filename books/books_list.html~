@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<head>
+    <meta charset="utf-8">
+    <title>Books</title>
+    <link rel="stylesheet" type="text/css" href="../stylesheets/main.css">
+    <meta name="viewport" content=
+    "width=device-width, initial-scale=1.0">
+   
+  </head>
+</head>
+<body>
+
+<p><a href="../index.html"> <----- Back to Index</a></p>
+
+<h1>My Library</h1>
+<p>Books that I have been reading (or will read in the future)...</p>
+
+<p>IN CONSTRUCTION - WILL ADD MORE TITLES SOON</p>
+
+<div class="table">
+<table>
+<tr style="background-color: #dddddd;color: black;">
+	<td><b>CODING / PROGRAMMING</b></td>
+	<td><b>Name</b></td>
+	<td><b>Year</b></td>
+</tr>
+<tr>
+	<td><img src="../images/book_covers/introducao-a-python-1ed.jpg" height="" width="200px" alt="" /></td>
+	<td>🇧🇷 Introdução a Programação com Python: Algoritmos e Lógica de Programação para iniciantes (1ª Edição)</td>
+	<td>2010</td>
+</tr>
+<tr>
+	<td><img src="../images/book_covers/programacao-java-oop.jpg" height="" width="200px" alt="" /></td>
+	<td>🇧🇷 Programação Java com Ênfase em Orientação a Objetos</td>	
+	<td>2009</td>
+</tr>
+<tr>
+	<td><img src="../images/book_covers/visual-basic-passo-a-passo.jpg" height="" width="200px" alt="" /></td>
+	<td>Microsoft Visual Basic 2008 - Passo a Passo</td>
+	<td>2009</td>
+</tr>
+<tr style="background-color: #dddddd;color: black;">
+	<td><h3>STATISTICS</h3></td>
+	<td><b>Name</b></td>
+	<td><b>Year</b></td>
+	</tr>
+</table>
+</div>
+
+</body>
+</html>
