@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<html lang="">
+    <meta charset="utf-8">
+    <title>Exercise 1</title>
+    <link rel="stylesheet" type="text/css" href="../../../stylesheets/main.css">
+    <meta name="viewport" content=
+    "width=device-width, initial-scale=1.0">
+   
+    <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+<p><a href="../operational-research-index.html"> <----- Back to Exercises Index</a></p>
+
+<h1>Operational Research - Exercise 1</h1>
+
+<p>To a given area, used to the production of soybeans and cotton, it's estimated that are <strong>800 men/hour</strong> available during the sowing season, being needed <strong>20 men/hour</strong> by hectare of soybeans and <strong>40 men/hour</strong> by hectare of cotton.</p>
+<p>It's offered a maximum line of credit of <strong>6000 m.u.</strong> divided in the following way:</p>
+<ul><li><strong>300 m.u.</strong> by hectare of soybeans</li><li><strong>100 m.u.</strong> by hectare of cotton</li></ul>
+<p>How to organize this plantation are if the profit margin expected is <strong>100 m.u.</strong> by hectare of soybeans and <strong>80 m.u.</strong> by hectare of cotton?</p>
+
+<p><strong style="color: yellow;">Objective:</strong> Find the quantity of soybeans and cotton to be produced in order to <u>maximize the profit</u>.</p>
+<p><strong style="color: yellow;">Decision Variables:</strong> Soybeans and Cotton</p>
+
+<div class="mathbox">
+<p>Table made to organize the given information:</p>
+
+<table>
+	<tr style="background-color: #dddddd;color: black;"><td>hectare</td><td>men/hour</td><td>credit</td><td>profit</td></tr>
+	<tr><td style="background-color: darkgrey;color: black;">soybeans (x)</td><td>20</td><td>300</td><td>100</td></tr>
+	<tr><td style="background-color: darkgrey;color: black;">cotton (y)</td><td>40</td><td>100</td><td>80</td></tr>
+	<tr><td>-</td><td><= 800</td><td><= 6000</td><td>-</td></tr>
+</table>
+
+<p><strong style="color: yellow;">Objective Function: </strong> $$Z=100x+80y$$</p>
+
+<p>Organizing the information, we have two given equations:</p>
+$$20x+40y<=800$$
+$$300x+100y<=6000$$
+
+<p>That can be turn into a system of equations in order to find both x and y:</p>
+$$\begin{cases}20x+40y<=800\\300x+100y<=6000\end{cases}$$
+$$x,y>=0$$
+
+<p>As seen <a href="../../../math/simultaneous_equations.html">here</a>, we can calculate this using some methods, however first we can simplify both equations to make things easier:</p>
+
+$$\begin{cases}20x+40y<=800 (\div 20)\\300x+100y<=6000 (\div 30)\end{cases}\longrightarrow\begin{cases}x+2y<=40\\3x+y<=60\end{cases}$$
+
+<p>Here we will be using the <strong>addition without opposing signs method.</strong></p>
+
+$$\begin{cases}x+2y<=40(*-3)\\3x+y<=60\end{cases}=\begin{cases}-3x-6y<=-120(*-3)\\3x+y<=60\end{cases}$$
+$$\begin{cases}-6y<=-120\\y<=60\end{cases}\over -5y<=-60$$
+$$y<=\dfrac{60}{5}$$
+$$y<=12$$
+
+<p>using the result of y on the first equation to find x:</p>
+
+$$x+2(12)<=40$$
+$$x<=40-24$$
+$$x<=16$$
+
+<p>with that we have:</p>
+
+$$(16,12)$$
+
+<p>That we can use to find the <strong>objective function:</strong></p>
+
+$$Z=100x+80y$$
+$$Z=100(16)+80(12)$$
+$$Z=2560$$
+
+<p><strong style="color: yellow;">Result:</strong> <strong>2560 m.u.</strong> is the maximum profit that can be achieved from the plantation of soybeans and cotton, <u>given the constraints of labor availability and credit limits.</u></p>
+</div>
+
+<div class="mathbox">
+<h2>Graphical Representation</h2>
+<p>We can also represent this problem in a Cartesian Plane.</p>
+
+<img src="../../../images/math/operational-research/ex1_soybean&cotton_ggb.png" width="721" height="671" alt="">
+
+<a href="../../../files/geogebra/ex_po_soybeans&cotton.ggb" download="ex_po_soybeans&cotton.ggb">
+    <button type="button">Download this graph (.ggb)</button>
+</a>
+
+<p>With that, we can see the maximum profit as the diagonal line that goes from (0,0) to (16,12), as being inside the viable region. </p>
+
+</div>
+
+<hr align="center" size="5" width="50%">
+
+<h3>Resources:</h3>
+
+<li>📚 🇧🇷 CAIXETA FILHO, José Vicente. Pesquisa Operacional: técnicas de otimização aplicadas a sistemas agroindustriais.</li>
+<li>📚 🇧🇷 LACHTERMACHER, Gerson. Pesquisa Operacional na tomada de decisões.</li>
+
+</body>
+</html>
