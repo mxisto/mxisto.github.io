@@ -51,7 +51,9 @@ $$x=8$$
 <p>and now we have the same result</p>
 
 <p>A worry in lots of teachers is that when presented to this principle, the student would say <i>" - Its the same thing [as doing the other way]."</i>. In fact the result does remains the same, however the problem resides in the understandings of how equations really work.</p>
+</div>
 
+<div class="mathbox">
 <h2>Example 2</h2>
 <p>Solve the equation:</p>
 $$2x-3=7$$
@@ -65,6 +67,22 @@ $$\frac{2x}{2}=\frac{10}{2}$$
 $$x=5$$
 </div>
 
+<div class="mathbox">
+<h2>Example 3 - Inequation</h2>
+<p>This example gets a little more tricky, but shows well the principle:</p>
+$$-3 \lt \dfrac{x-5}{2} \lt 3$$
+<p>In order to remove number 2 in the middle, since it's dividing we multiply by 2 in all the instances:</p>
+$$-3(*2) \lt (2*)\dfrac{x-5}{2} \lt 3(*2)$$
+<p>If we were to make the operation in the middle, we can see that both the number 2 that is multiplying and the one dividing null themselves:</p>
+$$(2*)\dfrac{x-5}{2}=\dfrac{2x-10}{2}=x-5$$
+<p>so with that:</p>
+$$-6 \lt x-5 \lt 6$$
+<p>On the same idea, we need to eliminate number 5:</p>
+$$-6+5 \lt x-5+5 \lt 6+5$$
+$$-1 \lt x \lt 11$$
+<p><strong>Result:</strong> x is set between -1 and 11.</p>
+</div>
+
 <hr align="center" size="5" width="50%">
 
 <p>by seeing this, I hope that this principle can be clarifying to you in learning Math as it was to me.</p>
@@ -72,9 +90,11 @@ $$x=5$$
 <h3>Resources</h3>
 
 <b>Professor Octavio on YouTube:</b>
-<li>📽️ (Portuguese) Fique 50% mais rápido e 100% honesto usando o princípio da igualdade! | <a href="https://www.youtube.com/watch?v=OYHwS9k1NWo">Video Link</a></li>
+<li>📽️ 🇧🇷 Fique 50% mais rápido e 100% honesto usando o princípio da igualdade! | <a href="https://www.youtube.com/watch?v=OYHwS9k1NWo">Video Link</a></li>
 
-<li>📽️ (Portuguese) "Regrinhas mágicas" estão destruindo o ensino de matemática no Brasil | <a href="https://www.youtube.com/watch?v=TGOQXUcAiJw">Video Link</a></li>
+<li>📽️ 🇧🇷 "Regrinhas mágicas" estão destruindo o ensino de matemática no Brasil | <a href="https://www.youtube.com/watch?v=TGOQXUcAiJw">Video Link</a></li>
+<b>Books:</b>
+<li>📚 🇧🇷 Spiegel, Murray Ralph. Estatística: resumo da teoria, 875 problemas resolvidos, 619 problemas propostos (1971). From the original <i>Schaums Outline of Theory and Problems</i></li>
 
 </body>
 </html>

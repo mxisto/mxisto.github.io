@@ -21,8 +21,8 @@
 <ul><li><strong>300 m.u.</strong> by hectare of soybeans</li><li><strong>100 m.u.</strong> by hectare of cotton</li></ul>
 <p>How to organize this plantation are if the profit margin expected is <strong>100 m.u.</strong> by hectare of soybeans and <strong>80 m.u.</strong> by hectare of cotton?</p>
 
-<p><strong style="color: yellow;">Objective:</strong> Find the quantity of soybeans and cotton to be produced in order to <u>maximize the profit</u>.</p>
-<p><strong style="color: yellow;">Decision Variables:</strong> Soybeans and Cotton</p>
+<p><strong>Objective:</strong> Find the quantity of soybeans and cotton to be produced in order to <u>maximize the profit</u>.</p>
+<p><strong>Decision Variables:</strong> Soybeans and Cotton</p>
 
 <div class="mathbox">
 <p>Table made to organize the given information:</p>
@@ -31,35 +31,35 @@
 	<tr style="background-color: #dddddd;color: black;"><td>hectare</td><td>men/hour</td><td>credit</td><td>profit</td></tr>
 	<tr><td style="background-color: darkgrey;color: black;">soybeans (x)</td><td>20</td><td>300</td><td>100</td></tr>
 	<tr><td style="background-color: darkgrey;color: black;">cotton (y)</td><td>40</td><td>100</td><td>80</td></tr>
-	<tr><td>-</td><td><= 800</td><td><= 6000</td><td>-</td></tr>
+	<tr><td>-</td><td>$$\leq 800$$</td><td>$$\leq 6000$$</td><td>-</td></tr>
 </table>
 
-<p><strong style="color: yellow;">Objective Function: </strong> $$Z=100x+80y$$</p>
+<p><strong>Objective Function: </strong> $$Z=100x+80y$$</p>
 
-<p>Organizing the information, we have two given equations:</p>
-$$20x+40y<=800$$
-$$300x+100y<=6000$$
+<p>Organizing the information, we have two given inequations:</p>
+$$20x+40y \leq 800$$
+$$300x+100y \leq 6000$$
 
 <p>That can be turn into a system of equations in order to find both x and y:</p>
-$$\begin{cases}20x+40y<=800\\300x+100y<=6000\end{cases}$$
-$$x,y>=0$$
+$$\begin{cases}20x+40y \leq 800\\300x+100y \leq 6000\end{cases}$$
+$$x,y \geq 0$$
 
 <p>As seen <a href="../../../math/simultaneous_equations.html">here</a>, we can calculate this using some methods, however first we can simplify both equations to make things easier:</p>
 
-$$\begin{cases}20x+40y<=800 (\div 20)\\300x+100y<=6000 (\div 30)\end{cases}\longrightarrow\begin{cases}x+2y<=40\\3x+y<=60\end{cases}$$
+$$\begin{cases}20x+40y \leq 800 (\div 20)\\300x+100y \leq 6000 (\div 30)\end{cases}\longrightarrow\begin{cases}x+2y \leq 40\\3x+y \leq 60\end{cases}$$
 
 <p>Here we will be using the <strong>addition without opposing signs method.</strong></p>
 
-$$\begin{cases}x+2y<=40(*-3)\\3x+y<=60\end{cases}=\begin{cases}-3x-6y<=-120(*-3)\\3x+y<=60\end{cases}$$
-$$\begin{cases}-6y<=-120\\y<=60\end{cases}\over -5y<=-60$$
-$$y<=\dfrac{60}{5}$$
-$$y<=12$$
+$$\begin{cases}x+2y \leq 40(*-3)\\3x+y \leq 60\end{cases}=\begin{cases}-3x-6y \leq -120(*-3)\\3x+y \leq 60\end{cases}$$
+$$\begin{cases}-6y \leq -120\\y \leq 60\end{cases}\over -5y \leq -60$$
+$$y \leq \dfrac{60}{5}$$
+$$y \leq 12$$
 
 <p>using the result of y on the first equation to find x:</p>
 
-$$x+2(12)<=40$$
-$$x<=40-24$$
-$$x<=16$$
+$$x+2(12) \leq 40$$
+$$x \leq 40-24$$
+$$x \leq 16$$
 
 <p>with that we have:</p>
 
@@ -71,7 +71,7 @@ $$Z=100x+80y$$
 $$Z=100(16)+80(12)$$
 $$Z=2560$$
 
-<p><strong style="color: yellow;">Result:</strong> <strong>2560 m.u.</strong> is the maximum profit that can be achieved from the plantation of soybeans and cotton, <u>given the constraints of labor availability and credit limits.</u></p>
+<p><strong>Result:</strong> <strong>2560 m.u.</strong> is the maximum profit that can be achieved from the plantation of soybeans and cotton, <u>given the constraints of labor availability and credit limits.</u></p>
 </div>
 
 <div class="mathbox">
@@ -80,9 +80,9 @@ $$Z=2560$$
 
 <img src="../../../images/math/operational-research/ex1_soybean&cotton_ggb.png" width="721" height="671" alt="">
 
-<a href="../../../files/geogebra/ex_po_soybeans&cotton.ggb" download="ex_po_soybeans&cotton.ggb">
+<p><a href="../../../files/geogebra/ex_po_soybeans&cotton.ggb" download="ex_po_soybeans&cotton.ggb">
     <button type="button">Download this graph (.ggb)</button>
-</a>
+</a></p>
 
 <p>With that, we can see the maximum profit as the diagonal line that goes from (0,0) to (16,12), as being inside the viable region. </p>
 

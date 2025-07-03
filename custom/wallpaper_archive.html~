@@ -22,111 +22,21 @@
 <br>
 </div>
 
-<!-- table that holds each wallpaper-->
-<div style="text-align: center;"><table>
-<tr>
-
-<td  style="border: none;"><a href="../files/wallpapers/krystal_pape.png"><img src="../files/wallpapers/krystal_pape_thumbnail.jpeg" width="300" height="240" border="1" ></a>
-<p><strong>Krystal</strong></p>
-<p>| 5:4 | 1280x1024 |</p>
-<p style="font-size: 14px"><i>Made with Photoshop 6.0</i></p></td>
-
-<td  style="border: none;"><a href="../files/wallpapers/yen_rin1.png"><img src="../files/wallpapers/yen_rin1_thumbnail.jpeg" width="300" height="187" border="2" ></a>
-<p><strong>Untitled by Yen Rin</strong></p>
-<p>| 16:10 | 2560x1600 |</p>
-<p style="font-size: 14px">Made with GIMP</p></td>
-
-<td  style="border: none;">
-<a href="../files/wallpapers/sachi_pape.png"><img src="../files/wallpapers/sachi_pape_thumbnail.jpeg" width="300" height="169" border="2"></a>
-<p><strong>Sachi the Spirit Fox by Tyson Tan</strong></p>
-<p>| 16:9 | 3840x2160 |</p>
-<p style="font-size: 14px">Made with GIMP</p></td>
-</tr>
-
-<tr>
-<td  style="border: none;">
-<a href="../files/wallpapers/dianefox.png"><img src="../files/wallpapers/dianefox_thumbnail.jpeg" width="300" height="169" border="2"></a>
-<p><strong>Diane Foxington by sverhnovapony</strong></p>
-<p>| 16:9 | 3840x2160 |</p>
-<p style="font-size: 14px">Made with GIMP</p></td>
-
-<td style="border: none;">
-<a href="../files/wallpapers/renamon_pape.png"><img src="../files/wallpapers/renamon_pape_thumbnail.jpeg" width="300" height="169" border="2"></a>
-<p><strong>Renamon by wolftang</strong></p>
-<p>| 16:9 | 3840x2160 |</p>
-<p style="font-size: 14px">Made with GIMP</p></td>
-
-<!-- <td style="border: none;">
-link for wallpaper and thumbnail (usually I make this automatically with Bluefish)
-<p><strong>Name</strong></p>
-<p>| | |</p>
-<p style="font-size: 14px">Made with </p></td> -->
-
-</tr>
-</table></div>
+<!-- table that holds each wallpaper below-->
 
 <table>
 <tr>
-<h3>Sly Cooper Characters (Slideshow)</h3>
-
-<td style="border: none;">
-<a href="../files/wallpapers/sly_series_sly.png"><img src="../files/wallpapers/sly_series_sly_thumbnail.jpeg" width="300" height="188" border="2"></a>
-<p>Sly Cooper</p>
-</td>
-
-<td style="border: none;">
-<a href="../files/wallpapers/sly_series_carmelita.png"><img src="../files/wallpapers/sly_series_carmelita_thumbnail.jpeg" width="300" height="188" border="2"></a>
-<p>Carmelita Fox</p>
-</td>
-
-<td style="border: none;">
-<a href="../files/wallpapers/sly_series_bentley.png"><img src="../files/wallpapers/sly_series_bentley_thumbnail.jpeg" width="300" height="188" border="2"></a>
-<p>Bentley Turtle</p>
-</td>
+	<td style="border: none;"></td>
+	<td style="border: none;"><a href="../files/wallpapers/hardcore_owl.png"><img src="../files/wallpapers/hardcore_owl_thumbnail.jpeg" width="300" height="169" alt="Hardcore Owl wallpaper"></a>
+	<h5>1920x1080</h5></td>
+	<td style="border: none;"></td>
 </tr>
-
 <tr>
-<td style="border: none;">
-<a href="../files/wallpapers/sly_series_murray.png"><img src="../files/wallpapers/sly_series_murray_thumbnail.jpeg" width="300" height="188" border="2"></a>
-<p>Murray Hippopotamus</p>
-</td>
-
-<td style="border: none;">
-<a href="../files/wallpapers/sly_series_dimitri.png"><img src="../files/wallpapers/sly_series_dimitri_thumbnail.jpeg" width="300" height="188" border="2"></a>
-<p>Dimitri Lousteau</p>
-</td>
-
-<td style="border: none;">
-<a href="../files/wallpapers/sly_series_paradox.png"><img src="../files/wallpapers/sly_series_paradox_thumbnail.jpeg" width="300" height="188" border="2"></a>
-<p>Cyrille le Paradox</p>
-</td>
+	<td style="border: none;"></td>
+	<td style="border: none;"></td>
+	<td style="border: none;"></td>
 </tr>
-
-<tr>
-
-<td style="border: none;"></td>
-<td style="border: none;"><p>| 16:10 | 1920x1200 |</p>
-<p style="font-size: 14px">Made with GIMP</p>
-<td style="border: none;"></td>
-</tr>
-
 </table>
-
-<!-- tables ends here ^ -->
-
-<!-- template:
-
-<td style="border: none;">
-link for wallpaper and thumbnail (usually I make this automatically with Bluefish)
-<p><strong>Name</strong></p>
-<p>| | |</p>
-<p style="font-size: 14px">Made with </p></td>
-
- -->
- 
-<hr size="5" width="75%">
-
-<footer style="font-size: 12px"><strong>Disclaimer!:</strong> These wallpapers are made avaliable as they are, and without any goals of monetary profit by the webmaster of this page. The individual artists are credited in the title of each image, and the user is encouraged, if they desire, to support said artists by the means that they see most fit.</footer>
 
 </div>
 

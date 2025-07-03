@@ -20,7 +20,7 @@
 <div class="mathbox">
 <h2>Example</h2>
 $$\dfrac{2}{3}+\dfrac{2}{6}$$
-<p>With this, we ask: which equivalent fraction of the first fraction has the same denominator from the second fraction?</p>
+<p>With this, we ask: which equivalent fraction of the first fraction has the same denominator from the second fraction? (Which fraction with denominator 6 is equivalent to 2 over 3?)</p>
 <p>To find it out, we make a division to know for which number to multiply both the numerator and denominator:</p>
 $$\dfrac{2}{3}+\dfrac{?}{6}$$
 <p>We know that 6 divided by 3 is 2, so we can multiply by two the numerator:</p>
