@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<html lang="">
+    <meta charset="utf-8">
+    <title>Exercise 2</title>
+    <link rel="stylesheet" type="text/css" href="../../../stylesheets/main.css">
+    <meta name="viewport" content=
+    "width=device-width, initial-scale=1.0">
+   
+    <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+
+<p><a href="../operational-research-index.html"> <----- Back to Exercises Index</a></p>
+
+<h1>Operational Research - Exercise 2</h1>
+
+</div>
+
+<hr align="center" size="5" width="50%">
+
+<p>A factory produces two products, being <strong>P1</strong> and <strong>P2</strong>. The unitary profit of P1 is <strong>1000 m.u.</strong> while the one of P2 is <strong>1800 m.u.</strong>. The factory needs <strong>20 hours</strong> to build a unit of P1 and <strong>30 hours</strong> to fabricate one unit of P2. The anual production time available for this is <strong>1200 hours</strong>.</p> 
+<p>The expected demand for each product is <strong>40 anual units</strong> of P1 and <strong>30 anual units</strong> of P2. Which is the production plan so that the business maximizes it's profit on these items?</p>
+
+<p><strong>Objective:</strong> Maximize the profit of the given products.</p>
+<p><strong>Decision Variables:</strong> Product 1 and Product 2</p>
+<p><strong>Restrictions: </strong>hours-per-unit, expected demand</p>
+
+<div class="mathbox">
+    <p>Table to organize the given information:</p>
+
+    <table>
+        <tr style="background-color: #dddddd;color: black;"><td>-</td><td>profit</td><td>hours</td><td>demand</td></tr>
+        <tr><td style="background-color: darkgrey;color: black;">Product 1</td><td>20</td><td>300</td><td>$$\leq 40$$</td></tr>
+        <tr><td style="background-color: darkgrey;color: black;">Product 2</td><td>40</td><td>100</td><td>$$\leq 30$$</td></tr>
+        <tr><td></td><td></td><td>$$\leq 1200$$</td><td></td></tr>
+    </table>
+
+    <p><strong>Objective Function: </strong> $$Z=1000x+1800y$$</p>
+
+    <p>Organizing the inequations, we have the following:</p>
+    <p>$$20x+30y\leq1200 \therefore 2x+3y\leq120$$ (our resources)</p>
+    $$x\leq40$$
+    $$y\leq30$$
+    <p>(restrictions on demand)</p>
+
+    <h3>Finding the viable points</h3>
+
+    <p>This case is different from the first exercise, since it only gives us one inequation we cannot make a system of equations. Instead, we will use this inequation to find x and y:</p>
+    <p>By turning the inequations into equations, we have that:</p>
+    $$x\leq40\rightarrow x=40$$
+    $$y\leq30\rightarrow y=30$$
+
+    <p>Which we can replace in the first equation to find the new points, in this case, we will find two sets, since we already have one for each:</p>
+
+    <p><b>For x:</b></p>
+    $$(40,?)$$
+    $$2(40)+3y=120 \therefore 80+3y=120 \therefore y=\dfrac{120-80}{3}$$
+    $$y≃13.333\ldots$$
+    $$(40,13.333\ldots)$$
+
+
+    <p><b>For y:</b></p>
+    $$(?,30)$$
+    $$2x+3(30)=120 \therefore 2x+90=120 \therefore x=\dfrac{120-90}{2}$$
+    $$x=15$$
+    $$(15,30)$$
+
+    <p>With that we have:</p>
+    $$(40,13.333\ldots)$$
+    $$(15,30)$$
+
+    <p>However we can still find the other viable points:</p>
+    $$x=0, \ y=30\rightarrow(0,30)$$
+    $$x=40, \ y=0\rightarrow(40,0)$$
+
+    <p>In the end, the viable points are:</p>
+    $$\begin{array}{ccc}
+    (0,0) & (0,30) & (40,0) \\
+    & (40,13.333) & (15,30)
+    \end{array}$$
+
+    <h3>Evaluating the Objective Function in each avaliable point</h3>
+    $$Z=1000x+1800y$$
+    <table>
+  <thead>
+    <tr>
+      <th>Point</th>
+      <th></th>
+      <th>Z value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>(0, 0)</td>
+      <td>$$1000(0) + 1800(0)$$</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>(0, 30)</td>
+      <td>$$1000(0) + 1800(30)$$</td>
+      <td>54.000</td>
+    </tr>
+    <tr>
+      <td>(15, 30)</td>
+      <td>$$1000(15) + 1800(30)$$</td>
+      <td><strong>69.000</strong></td>
+    </tr>
+    <tr>
+      <td>(40, 13.33)</td>
+      <td>$$1000(40) + 1800(13.33)$$</td>
+      <td>≈ 63.994</td>
+    </tr>
+    <tr>
+      <td>(40, 0)</td>
+      <td>$$1000(40) + 1800(0)$$</td>
+      <td>40.000</td>
+    </tr>
+  </tbody>
+</table>
+    <p>We can observe that the point that maximizes this function is (15,30).</p>
+    $$Zmax=69000$$
+    <p><u>This means that we can achieve the maximum profit of <b>69.000 m.u.</b> by selling <b>15 units</b> of Product 1 and <b>30 units</b> of Product 2.</u></p>
+</div>
+<div class="mathbox">
+    <h2>Graphical Representation</h2>
+    <p>We can also represent this problem in a Cartesian Plane.</p>
+    <img src="../../../images/math/operational-research/ex_factory_products_ggb.png">
+
+    <p><a href="../../../files/geogebra/ex_po_factory_production.ggb" download="ex_po_factory_production.ggb">
+    <button type="button">Download this graph (.ggb)</button></a></p>
+
+    <p>In this case the maximum profit is the function that goes from (0,0) to (15,30), as being inside the viable region given by the restrictions.</p>
+
+</div>
+
+<h3>Resources:</h3>
+
+<li>📚 🇧🇷 CAIXETA FILHO, José Vicente. Pesquisa Operacional: técnicas de otimização aplicadas a sistemas agroindustriais.</li>
+<li>📚 🇧🇷 LACHTERMACHER, Gerson. Pesquisa Operacional na tomada de decisões.</li>
+
+</body>
+</html>
