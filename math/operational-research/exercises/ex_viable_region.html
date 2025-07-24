@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<html lang="">
+    <meta charset="utf-8">
+    <title>Exercise - Viable Region</title>
+    <link rel="stylesheet" type="text/css" href="../../../stylesheets/main.css">
+    <meta name="viewport" content=
+    "width=device-width, initial-scale=1.0">
+   
+    <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+
+<p><a href="../operational-research-index.html"> <----- Back to Exercises Index</a></p>
+
+<h1 id="top">Operational Research - Finding the Viable Region</h1>
+
+</div>
+
+<hr align="center" size="5" width="50%">
+
+<p>In these basic examples we will analyse and calculate the given equation systems in order to build a graphical representation using Geogebra. The idea is to understand the process for turning the inequations into a graph for analysis purposes.</p>
+<p><strong>Tip:</strong> In these examples we are turning the inequations into equations simply to make them appear as lines instead of an area in Geogebra, this is useful to trace the viable region with the sets given, as we will see.</p>
+
+<div style="text-align: center;font-size: large;">
+    <p>1)<a href="#1">\(\begin{cases} 2x+3y \leq 12 \\ x \leq 5\end{cases}\)</a>
+    <p>2)<a href="#2">\(\begin{cases} 4x+7y\leq28 \\ x+y\leq6\end{cases}\)</a></p>
+    <p>3)<a href="#3">\(\begin{cases}x+y\leq125 \\ 5x+6y\leq180 \\ x\geq10 \\ y\geq5 \end{cases}\)</a></p>
+    <p>4)<a href="#4">\(\begin{cases}2x+5y\leq40 \\ 6x+3y\leq35 \\ x+4y\leq28 \\ y\geq5 \end{cases}\)</a></p>
+    <p>5)<a href="#5">\(\begin{cases}10x+12y\leq325 \\ 14x+8y\leq215 \\ 5x+y\leq150 \\ x\geq6 \end{cases}\)</a></p>
+    </div>
+
+<h2 id="1">1)</h2>
+<div class="mathbox">
+    $$\begin{cases} 2x+3y \leq 12 \\ x \leq 5\end{cases}$$
+    <p>In this case we can isolate <i>x</i> and <i>y</i> in order to find both sets</p>
+
+    <h3><strong>x = 0</strong></h3>
+    $$2\cdot0+3y\leq12$$
+    $$3y\leq12 \therefore y\leq\dfrac{12}{3} \therefore y=4$$
+    $$(0,4)$$
+
+    <h3><strong>y = 0</strong></h3>
+    $$2x+3\cdot0\leq12$$
+    $$x\leq12 \therefore x\leq\dfrac{12}{2} \therefore x=6$$
+    $$(6,0)$$
+
+    <p>Since the second term only has <i>x</i>, we can consider <i>y</i> as being equal to zero, so:</p>
+    $$x\leq5$$
+    $$(5,0)$$
+
+    <img class="ex_img" src="../../../images/math/operational-research/viable_reg1.png">
+    <p><a href="../../../files/geogebra/ex_viable_reg1.ggb" download="ex_viable_reg1.ggb">
+        <button type="button">Download this graph (.ggb)</button></a></p>
+    <p>In this case, we see that the line created by <i>x=5</i> (5 , 0) intersects with the line from the equation. Giving us (5 , 0.67). We can confirm this by replacing the <i>x</i> in the equation:</p>
+    $$2(5)+3y=12$$
+    $$10+3y=12 \therefore y=\dfrac{12-10}{3} \therefore y≃0.6666666667\rightarrow0.67$$
+</div>
+
+<h2 id="2">2)</h2>
+<div class="mathbox">
+    $$\begin{cases} 4x+7y\leq28 \\ x+y\leq6\end{cases}$$
+    <p>we can isolate <i>x</i> and <i>y</i> in order to find both sets in both equations.</p>
+    
+    <h3><strong>x = 0</strong></h3>
+    $$4\cdot0+7y\leq28$$
+    $$y\leq\dfrac{28}{7} \therefore y=4$$
+    $$(0,4)$$
+    $$\\$$
+    $$0+y\leq6$$
+    $$y=6$$
+    $$(0,6)$$
+
+    <h3><strong>y = 0</strong></h3>
+    $$4x+7\cdot0\leq28$$
+    $$x\leq\dfrac{28}{4} \therefore x=7$$
+    $$(7,0)$$
+    $$\\$$
+    $$x+0\leq6$$
+    $$x=6$$
+    $$(6,0)$$
+
+    <p>However, since we have a proper system of equations, we can also calculate the points where both equations intersect:</p>
+    $$\begin{cases} 4x+7y\leq28 \\ x+y\leq6\end{cases}$$
+    <p>Here, we will use the second equation to isolate <i>x</i> and find <i>y</i> using the first one:</p>
+    $$x+y=6$$
+    $$x=6-y$$
+    $$4(6-y)+7y=28 \therefore 24-4y+7y=28 \therefore 3y=4 \therefore y=\dfrac{4}{3}=1,33$$
+    $$y=1,33$$
+    <p>now for finding <i>x</i>:</p>
+    $$x+1.33=6 \therefore x=6-1.33$$
+    $$x=4.67$$
+    
+    <p>So we have the following set:</p>
+    $$(4.67, 1.33)$$
+
+     <img class="ex_img" src="../../../images/math/operational-research/viable_reg2.png">
+    <p><a href="../../../files/geogebra/ex_viable_reg2.ggb" download="ex_ex_viable_reg2.ggb">
+        <button type="button">Download this graph (.ggb)</button></a></p>
+    <p>With the graph, we can see that this is the coordinate where both equations intersect.</p>
+
+</div>
+
+<h2 id="3">3)</h2>
+<div class="mathbox">
+    $$\begin{cases}x+y\leq125 \\ 5x+6y\leq180 \\ x\geq10 \\ y\geq5 \end{cases}$$
+    <p>In this example we have both <i>x</i> and <i>y</i> specifying that the viable region must be greater or equal to 10 and 5, respectively.</p>
+    <p>First, by turning these inequations into equations we can take in consideration their coordinates:</p>
+    $$\begin{cases}x=10 \\ y=5 \end{cases} \rightarrow (10,5)$$
+    
+    <p>Now we can find the intersection between the first and second equation via a system of equations:</p>
+    $$\begin{cases}x+y=125 \\ 5x+6y=180\end{cases}$$
+    <p>Using the replacement method:</p>
+    $$x+y=125 \rightarrow x=125-y$$
+    $$\\$$
+    $$5(125-y)+6y=180 \therefore 625-5y+6y=180 \therefore y=180-625$$
+    $$y=-445$$
+    $$\\$$
+    $$x+(-445)=125$$
+    $$x=570$$
+    $$(570,-445)*$$
+    <p>*In this case we can ignore this intersection altogether since it gives us a negative value, in the context of Operational Research we always take in consideration that \(\mathbf{x,y\geq0}\).</p>
+
+    <p>For finding the next coordinates, since we know that \(x=10,y=5\), we can replace it's values in the first and second equation, however as you can see in the image below, the coordinates from \(x+y=125\) are out of the viable region found, thus not being calculated in this example.</p>
+
+    <p>Replacing the <i>x</i> and <y>y</y> values in \(5x+6y=180\):</p>
+    <strong>for x = 10:</strong>
+    $$(10,?)$$
+    $$5(10)+6y=180 \therefore y=\dfrac{180-50}{6} \therefore y≃21.67$$
+    $$(10,21.67)$$
+    <strong>for y = 5:</strong>
+    $$(?,5)$$
+    $$5x+6(5)=180 \therefore x=\dfrac{180-30}{5} \therefore x=30$$
+    $$(30,5)$$
+
+    <p>With these coordinates we can find the viable region.</p>
+    <img class="ex_img" src="../../../images/math/operational-research/viable_reg3.png">
+    <p><a href="../../../files/geogebra/ex_viable_reg3.ggb" download="ex_ex_viable_reg3.ggb">
+        <button type="button">Download this graph (.ggb)</button></a></p>
+    <p>As stated before, the region must be greater or equal to \((10,5)\).</p>
+</div>
+
+<h2 id="4">4)</h2>
+<div class="mathbox">
+    $$\begin{cases}2x+5y\leq40 \\ 6x+3y\leq35 \\ x+4y\leq28 \\ y\geq5 \end{cases}$$
+    <p>Using Geogebra, we can see the viable area in the cartesian plane by inserting the inequations, the darkest colored area indicates where the viable region is located:</p>
+    <img class="ex_img" src="../../../images/math/operational-research/viable_reg4.1.png">
+    
+    <p>In this case we would need only to take in consideration the coordinates resulting from the systems of equations between the second and third equations:</p>
+    $$\begin{cases}6x+3y\leq35 \\ x+4y\leq28 \end{cases}$$
+    <p>Doing the replacement method:</p>
+    $$x=28-4y$$
+    $$6(28-4y)=35 \therefore 168-24y+3y=35 \therefore y=\dfrac{135}{21} \therefore y=6.33$$
+    $$\\$$
+    $$x+4(6.33)=28 \therefore x=28-25.32 \therefore x=3.32$$
+    $$(3.32, 6.33)$$
+    <p>In relation to \(y\geq5\), we can see that it intersects with the second equation, by taking the statement that \(y\geq5\ \rightarrow (0, 5)\), we can use this set to find the coordinates of this function:</p>
+    $$6x+3(5)=35 \therefore x=\dfrac{20}{6} \therefore x=3.33$$
+    $$\\$$
+    $$6(0)+3y=35 \therefore y=\dfrac{35}{3} \therefore y=11.66$$
+    $$(3.33, 11.66)$$
+    <p>Finally, we can find the coordinates for the third equation by isolating the factors:</p>
+    $$x+4y=28$$
+    <strong>x = 0</strong>
+    $$0+4y=28 \therefore y=\dfrac{28}{7} \therefore y=7$$
+    $$(0,7)$$
+    <strong>y = 0</strong>
+    $$x+4(0)=28 \therefore x=28$$
+    $$(28,0)$$
+
+    <p>Note that not all of these points are used to form the viable region:</p>
+    <img class="ex_img" src="../../../images/math/operational-research/viable_reg4.2.png">
+    <p><a href="../../../files/geogebra/ex_viable_reg4.ggb" download="ex_ex_viable_reg4.ggb">
+        <button type="button">Download this graph (.ggb)</button></a></p>
+    
+    <p>This is a more compact example using Geogebra as a validation tool, but by graphing it by hand, on paper, you would need to calculate all of the sets in order to first find the viable region and then trace their respective coordinates.</p>
+</div>
+
+<h2 id="5">5)</h2>
+<div class="mathbox">
+    $$\begin{cases}10x+12y\leq325 \\ 14x+8y\leq215 \\ 5x+y\leq150 \\ x\geq6 \end{cases}$$
+    <p>Just like the last example, here we use Geogebra in order to find the viable region, confirming the coordinates:</p>
+    <img class="ex_img" src="../../../images/math/operational-research/viable_reg5.1.png">
+    
+    <p>We see that the second equation is the only one that is actually part of the viable region intersecting with \(x\geq6\).</p>
+    <p>In this case we can understand that if \(x=6\rightarrow(6,0)\)</p>
+    <p>So to find <i>y</i>:</p>
+    $$14(6)+8y=215 \therefore y=\dfrac{215-84}{8} \therefore y=16.38$$
+    $$(6,16.38)$$
+    <img class="ex_img" src="../../../images/math/operational-research/viable_reg5.2.png">
+    <p><a href="../../../files/geogebra/ex_viable_reg5.ggb" download="ex_ex_viable_reg5.ggb">
+        <button type="button">Download this graph (.ggb)</button></a></p>
+    <p>We already know the coordinates for \(x=6\), and the remaining coordinate can be found by isolating x:</p>
+    $$14x+8(0)=215 \therefore x=\dfrac{215}{14} \therefore x=15.36$$
+    $$(15.36,0)$$
+</div>
+<p></p>
+<a href="#top">Back to top ^</a>
+</body>
+</html>
