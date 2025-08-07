@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<html lang="">
+    <meta charset="utf-8">
+    <title>Exercise 3</title>
+    <link rel="stylesheet" type="text/css" href="../../../stylesheets/main.css">
+    <meta name="viewport" content=
+    "width=device-width, initial-scale=1.0">
+   
+    <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+    <p><a href="../operational-research-index.html"> <----- Back to Exercises Index</a></p>
+
+    <h1>Operational Research - Exercise 3</h1>
+
+    <p>A small transport company has two trucks, <strong>A and B</strong>, for delivering goods. The A truck can hold a smaller cargo while the B truck can hold a larger one.</p>
+    <p>To optimize the distribution the company wishes to make <strong>the least ammount of travels possible.</strong></p>
+    <p>Information:</p>
+    <ul>
+        <li>Each "type A" truck delivers one unit of a cargo, while the "type B" truck can move two units.</li>
+        <li>The company needs to transport at least 12 cargos daily.</li>
+        <li>Each "type A" truck utilizes three hours of operation per travel, while the "type B" uses one hour. For the operation to be viable is necessary 18 daily hours minimum.</li>
+    </ul>
+    <p><strong>Objective:</strong> Minimize the ammount of travels to be made</p>
+    <p><strong>Decision Variables:</strong> Truck A and Truck B</p>
+    <p><strong>Restrictions: </strong>cargo units, operation hours</p>
+    <div class="mathbox">
+        <p>With the given information we can create a table to organize the information:</p>
+
+        <table>
+            <tr>
+                <td style="border: none;"></td>
+                <td style="background-color: #dddddd;color: black;">Cargo Units</td>
+                <td style="background-color: #dddddd;color: black;">Oper. Hours</td>
+            </tr>
+            <tr>
+                <td>Truck A (x)</td>
+                <td>1</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>Truck B (y)</td>
+                <td>2</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td style="border: none;"></td>
+                <td style="border: none;">\(\geq12\)</td>
+                <td style="border: none;">\(\geq18\)</td>
+            </tr>
+        </table>
+        <p>The following restrictions can be interpreted:</p>
+        $$x+2y\geq12$$
+        $$3x+y\geq18$$
+
+        <p><strong>Objective Function:</strong> \(Z=x+y\)</p>
+
+        <p>Via a system of equations we can find the intersection:</p>
+        $$\begin{cases}x+2y\geq12 \\ 3x+y\geq18\end{cases}$$
+        <p>Using the replacement method:</p>
+        $$x=12-2y$$
+        $$3(12-2y)+y=18 \therefore 36-6y+y=18 \therefore y=\dfrac{18}{5} \therefore y=3.6$$
+        $$\\$$
+        $$x=12-2(3.6) \therefore x=12-7.2 \therefore x=4.8$$
+        $$(4.8, 3.6)$$
+
+        <p>Also we can check if both results satisfies the restrictions:</p>
+        $$x+2y\geq12 \therefore 4.8+2⋅3,6 \therefore 4.8+7.2=12$$
+        $$3x+y\geq18 \therefore 3⋅4.8+3.6 \therefore 14.4+3.6=18$$
+
+        <h2>Graphical Representation</h2>
+        <img src="../../../images/math/operational-research/ex_3_trucks.png">
+        <p><a href="../../../files/geogebra/ex_po_trucks.ggb" download="ex_po_trucks.ggb">
+        <button type="button">Download this graph (.ggb)</button></a></p>
+
+        <p>We can observe that the intersection is (4.8, 3.6).</p>
+        $$Z=x+y \therefore Z=4.8+3.6$$
+        $$Z=8.4$$
+
+        <p><u>This means that together the two trucks make <b>8.4 travels</b></u>, however, since we can't make a "half-travel", the values must be rounded to integers.</p>
+        
+        <h2>Re-evaluation with rounded values</h2>
+        $$x=⌈4,8⌉=5$$
+        $$y=⌈3,6⌉=4$$
+        <p>Testing both restriction again:</p>
+        $$x+2y\geq12 \therefore 5+8=13$$
+        $$3x+y\geq18 \therefore 15+4=19$$
+        <p>This is a viable and integer solution, although slightly above the actual optimum (which was 8.4).</p>
+        $$Z=x+y \therefore 5+4=9$$
+        <p>With that, we came to the conclusion that:</p>
+        <p><u>To meet the constraints with the smallest integer number of trips, <b>truck A must make 5 trips and truck B must make 4 trips, for a total of 9 trips</b>. Although this solution is slightly above the theoretical optimum of 8.4 trips, it makes the viability possible.</u></p>
+
+    </div>
+    <hr align="center" size="5" width="50%">
+
+    <h3>Resources:</h3>
+
+    <li>📚 🇧🇷 CAIXETA FILHO, José Vicente. Pesquisa Operacional: técnicas de otimização aplicadas a sistemas agroindustriais.</li>
+    <li>📚 🇧🇷 LACHTERMACHER, Gerson. Pesquisa Operacional na tomada de decisões.</li>
+
+</body>
+</html>
