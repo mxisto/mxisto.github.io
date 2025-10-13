@@ -13,9 +13,8 @@
 
 <div style="text-align: center; align-content: center;">
 
-<div><h1>My Custom Wallpapers</h1>
-<p>I originally made these for myself in order to please my need for wallpapers for the many machines, systems and displays that I use regularly. But I think that someone might like them as well...</p>
-<p>The images are listed in no particular order, and each have the details about size and aspect ratio.</p>
+<div><h1>Wallpaper Archive</h1>
+<p>Some wallpapers that I've found online or made myself.</p>
 <i>(Click to see the full images)</i></div>
 <br>
 <hr size="5" width="50%">
@@ -24,15 +23,17 @@
 
 <!-- table that holds each wallpaper below-->
 
+<center><img src="../images/webbuttons/underconstruction.gif"></center>
+
 <table>
 <tr>
-	<td style="border: none;"></td>
-	<td style="border: none;"><a href="../files/wallpapers/hardcore_owl.png"><img src="../files/wallpapers/hardcore_owl_thumbnail.jpeg" width="300" height="169" align="middle"></a>
-	<h5>16:9 | 1920x1080</h5></td>
-	<td style="border: none;"></td>
+	<td style="border: none;"><a href="../files/wallpapers/bliss_600dpi.jpg"><img src="../files/wallpapers/bliss_600dpi_thumbnail.jpeg" width="300" height="241"></a></td>
+	<td style="border: none;"><a href="../files/wallpapers/wtc.jpg"><img src="../files/wallpapers/wtc_thumbnail.jpeg" width="300" height="225" alt="WorldTradeCenter"></a></td>
+	<td style="border: none;"><a href="../files/wallpapers/roman-aqueduct-of-segovia-spa-1562335.jpg"><img src="../files/wallpapers/roman-aqueduct-of-segovia-spa-1562335_thumbnail.jpeg" width="300" height="225"></a></td>
+	<td style="border: none"><a href="../files/wallpapers/Crystal.jpg"><img src="../files/wallpapers/Crystal_thumbnail.jpeg" width="300" height="225"></a></td>
 </tr>
 <tr>
-	<td style="border: none;"></td>
+	<td style="border: none;"><a href="../files/wallpapers/001.png"><img src="../files/wallpapers/001_thumbnail.jpeg" width="300" height="168"></a></td>
 	<td style="border: none;"></td>
 	<td style="border: none;"></td>
 </tr>

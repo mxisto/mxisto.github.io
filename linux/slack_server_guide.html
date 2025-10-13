@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<html lang="">
+    <meta charset="utf-8">
+    <title>Simple NAS with Slackware Linux</title>
+    <link rel="stylesheet" type="text/css" href="../stylesheets/main.css">
+    <meta name="viewport" content=
+    "width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <p><a href="../index.html"> <----- Back to Index</a></p>
+    
+    <h1 id="top">Simple NAS with Slackware Linux</h1>
+
+    <img src="../images/slack-penguin-color.gif">
+    <img src="../images/webbuttons/slacklogo2.jpg">
+
+    <p><strong>Slackware Linux</strong> can be used for a simple Network Attached Storage - NAS (a.k.a. File Server), making something useful from a old machine that would've been dismissed for everyday use. The reasons to specifically use Slackware are:</p>
+
+    <ol>
+        <li>It's lightweight</li>
+        <li>Still has support for 32bit machines</li>
+        <li>Already comes with the necessary packages to set up Samba (no Internet required during the installation process)</li>
+        <li><strong>You might be able to learn more about Linux in the process</strong></li>
+    </ol>
+
+    <h2>Index</h2>
+    <ol>
+        <li><a href="#1">Hardware Required</a></li>
+        <ol>
+            <li><a href="#1.1">Networking</a></li>
+            <li><a href="#1.2">Processors</a></li>
+            <li><a href="#1.3">Drives</a></li>
+        </ol>
+        <li><a href="#2">Getting some Slack</a></li>
+        <ol>
+            <li><a href="#2.1">Installing</a></li>
+            <li><a href="#2.2">First configurations</a></li>
+        </ol>
+        <li><a href="#3">Setting up a file share with Samba</a></li>
+        <li><a href="#4">Conclusion</a></li>
+    </ol>
+
+<hr align="center" size="5" width="50%"> 
+
+<h2 id="1">1. Hardware Required</h2>
+<p>When it comes to hardware, almost any machine can be used to host files in a local network, but there are some considerations to be taken before starting.</p>
+<h3 id="1.1">1.1. Networking</h3>
+<p>For instance, before talking about the machine itself, we need some other hardware to be able to connect the server in a offline LAN.</p> 
+<p>Firstly, we will need:</p>
+<ul>
+    <li>(1) Network Hub/Switch/Router</li>
+    <li>(2) Ethernet Cables</li>
+    <li>(1) Ethernet port on each machine connected</li>
+</ul>
+<p>The hub/switch/router will be the device responsible for managing communication between the machines in a LAN. The hubs and switches are the cheapest to buy, and if you router does not belong to your ISP you can use the "yellow ports" to their switch functionality. The prices will differ dependind on the megabytes-per-second rate, most cheaper ones are around 100Mbps wich will be fine for most uses.</p>
+<h3 id="1.2">1.2. Processors</h3>
+<p>The <b>computer</b> used for hosting the server is up to you. In this guide I will show only the bare minimum to set up a simple server, so I will not get into things like <b>R.A.I.D.</b> (sorry!). Regarding the machine, here is the bare minimum to run Slackware:</p>
+<ul>
+    <li>486 processor</li>
+    <li>64MB RAM</li>
+    <li>5GB of disk space (for a full install)</li>
+    <li>CD/DVD drive or USB port</li>
+</ul>
+<blockquote><p>Unfortunately Linux is slowly but surely dropping support for 32-bit in general, but at the time being it's still viable.</p>
+<p>While this guide is focused on x86/x64, Slack is also avaliable on ARM, however some instructions might be different, please check the Slackware website for further info in this regard.</p></blockquote>
+<p>Power consumption wise you might want a machine with low power draw since it will be running 24/7. Some known recommendations are:</p>
+<ul>
+    <li>Intel Atom</li>
+    <li>Intel Pentium M</li>
+    <li>Intel Core 2 Solo</li>
+    <li>Intel Core Solo</li>
+    <li>Intel Celeron M</li>
+    <li>AMD Athlon Neo</li>
+    <li>AMD Geode</li>
+    <li>Intel Core 2 Duo</li>
+    <li>1st Gen Intel Core i3/i5/i7</li>
+    <li>AMD A Series</li>
+</ul>
+<blockquote><p>In my server I run a single-core Atom N270, in fact most Atoms are only useful for things like this...</p></blockquote>
+<h3 id="1.3">1.3. Drives</h3>
+<p>You might have some old drive hanging around that might be useful for storage. <strong>Please keep in mind that one day your drive will</strong> fail, so learn to manage your files and avoid data loss, usually the best pratice is to make the <strong>1-2-3 method</strong>; keep at least 3 copies of a file in separated drives in order that if one fail, you still have two other copies.</p>
+<p>One recommendation is to install the system in one small drive and keep the bigger disks only with files, this way if the system or machine breaks you can more easily move your data to somewhere else.</p>
+<p>Test your disks with tools like <b>CrystalDiskInfo</b> to see if your drive has bad sectors; <strong>one bad sector is already a indicator that the drive is prone to fail at anytime.</strong></p>
+
+<h2 id="2">2. Getting some Slack</h2>
+<p>Slackware can be downloaded from <a href="http://www.slackware.com/getslack/">the project's website</a>. The 32-bit and 64-bit versions have a small difference in the installing process, but are very similar.</p>
+
+<h3 id="2.1">2.1 Installing Slackware</h3>
+<p>Going from the start. Slack boots into a CLI, the first thing to do is to partition the disk; I usually install the system first in a small disk, then add other drives to the server after the installation process.</p>
+<p>Since this process is already well documented, <a href="https://www.dedoimedo.com/computers/install_slackware.html">check this page for the install instructions</a></p>
+<p>When you get to the part of selecting the package sets to install, remember that for a server we will need:</p>
+<ul>
+    <li>A - Base Linux System</li>
+    <li>AP - Various Applications that do not need X</li>
+    <li>L - Networking</li>
+    <li>N - System Libraries (optional, see below)</li>
+    <li>X - X Window System (if you want to have the option of a GUI to configure some steps more easily)</li>
+</ul>
+<p>Continue following the other instructions and always go for the option labeled as "recommended" or "safest".</p> 
+<p>Now for the Networking; in this guide I will be using the NetworkManager way to set up a wireless network, this can be useful to update the system from time to time, we can set up a static IP adress later, but you can also set a static IP address here if you don't plan to connect the machine to the Internet.</p>
+<p>Read the guide linked above, and go back here when you can boot into the system itself.</p>
+
+<h3 id="2.2">2.2. First configurations</h3>
+<p>After creating a regular user, boot into Fluxbox by using the command <strong>startx</strong> if you already configured it as your main interface via <strong>xwmconfig</strong>, the first thing to do after a fresh install is to update the system and set the static IP adress to the server, the last will be done via the Ethernet port (most likely to be <em>eth0</em> in your machine. Here you have two options regarding updates:</p>
+<ol>
+    <li>Using a separate Wireless device (USB Wireless adapter, Wireless Card, etc.) that only will be active during the update process</li>
+    <li>Creating two configurations for your Wired Connection - one as a static IP and another to be used with DHCP for internet access</li>
+</ol>
+<p>For example, in my case I use the built-in Wireless adapter for updates, but I only keep it active during the update process, turning Wi-fi access off again after the process is done. This is easier to do via a GUI, so that's why we installed <b>X11</b>, the simplest solution is using <b>Fluxbox</b> and <strong>nm-applet</strong> to enable and disable the network via the tray icon.</p>
+<p>Since this guide is aimed at less experienced users, we will commit the horrible sin of setting this up via GUI.</p>
+<p>When first starting Fluxbox, open a terminal with the right-click and type <em>nm-applet &</em>, this will make a icon appear in the system tray on the bottom left corner</b>, there you can connect via Wi-fi or Wired connection, doing the update process:</p>
+
+<ol>
+    <li>Select a mirror from /etc/slackpkg/mirrors</li>
+    <li>Uncomment one mirror from the list</li>
+    </ol>
+<div class="codeblock">
+    <code>#~ slackpkg update gpg </br>
+    #~ slackpkg update </br>
+    #~ slackpkg upgrade-all
+</code></div>
+<p>After that, it is important to set up a simple firewall to limit the access from both SSH and Samba. The following configuration is taken and edited from <a href="https://www.dedoimedo.com/computers/install_slackware_6.html">here</a>.</p>
+<p>Create a text file containing the follow script named <strong>rc.firewall</strong>:</p>
+<div class="codeblock">
+    <code>
+        #!/bin/bash </br>
+        </br>
+        # Place the IP adresses that are allowed to access the device at the start of the script.</br>
+        iptables -A INPUT -s [IP_ADDRESS] -j ACCEPT</br>
+        </br>
+        # These two rules set the default policies, i.e. what to do if a </br>
+        # packet doesn't match any other rule, to drop any packet coming </br>
+        # into (INPUT) or routing through (FORWARD) the box. </br>
+        </br>
+        iptables -P INPUT DROP </br>
+        </br>
+        iptables -P FORWARD DROP </br>
+        </br>
+        # These rules are added (-A) to the INPUT chain. They allow packets </br>
+        # from any previously established connections and accept anything </br>
+        # from the loopback interface.</br>
+        </br>
+        iptables -A INPUT -m state --state ESTABLISHED,RELATED -j ACCEPT</br>
+        </br>
+        iptables -A INPUT -s 127.0.0.1 -d 127.0.0.1 -i lo -j ACCEPT</br>
+
+        # Below rule is needed ONLY if you want to have ssh connections. </br>
+        # Comment this line if you do NOT want to use ssh connections. </br>
+        # This rule added to the INPUT chain accepts any ssh connections. </br>
+        # Change ethx to reflect your network setup, i.e. use the name </br>
+        # of the device that connects to the Internet (e.g. eth0). </br>
+        </br>
+        iptables -A INPUT -p tcp --dport 22 -i eth0 -j ACCEPT</br>
+        </code></div>
+<ol>
+    <li>Make this file into a script. -> <strong>script rc.firewall</strong></li>
+    <li>Grant this file the necessary execution permissions. -> <strong>chmod 755 rc.firewall</strong></li>
+    <li>Move the script into the /etc/rc.d directory (this will make is start every boot). -> <strong> mv rc.firewall /etc/rc.d</strong></li>
+</ol>
+<p>Now for the static IP address: right-click on the network icon on the tray and go to <b>Edit Connections... -> Wired -> IPv4</b>. There you can set two parameters:</p>
+    <ul>
+        <li>IP Address - 192.168.0.?? (or any other type of IP address)</li>
+        <li>Netmask - 255.255.255.0 (will be shown as 24 after typing)</li>
+    </ul>
+<p>This need to be done also to the machines that will be connecting to the server (as we setted in the firewall configuration), for example, you can use the built-in network port for usual connection to the Internet and a separated network card to access the server, or using Wi-fi for Internet and the Ethernet port to access the server.</p>
+
+<h2 id="3">3. Setting up a file share with Samba</h2>
+<p>Now it is the time to install the disks to be used in the server. In short, the process is to:</p>
+<ol>
+    <li>Identify the disk name in /dev/</li>
+    <li>Mount the drive in a folder</li>
+    <li>Set the folder as a shared folder in the Samba config file</li>
+    <li>Make the mount permanent using fstab</li>
+</ol>
+<p>By default any connected device will be located in <strong>/dev/</strong>, you can see the devices connected using <strong>lsblk</strong> in the terminal, usually the main disk is labeled <b>sda</b>, and the following are labeled with the following letters (sdb, sdc, etc.).</p>
+<p>We can mount a drive in a folder on the <em>/home/</em> directory to access it more easily, first create a directory there:</p>
+<div class="codeblock">
+    <code>mkdir [DIRECTORY_NAME]</code>
+    </div>
+<p>And then mount the device in the new directory:</p>
+<div class="codeblock">
+    <code>mount -t [FILESYSTEM TYPE] [DEVICE] [DIRECTORY]</code>
+    </div>
+<p>Now we can configure Samba. The location for the configuration file is in <strong>/etc/samba/smb.conf</strong>, if the file does not exist, create it before editing via the <b>touch</b> command. A simple Samba configuration looks like this:</p>
+<div class="codeblock">
+    <code>
+    [global] </br>
+        workgroup = WORKGROUP </br>
+        server string = Samba server </br>
+        server role = standalone server </br>
+        valid users = [USERNAME] </br>
+        </br>
+    [Public]</br>
+        comment = Public folder</br>
+        browseable = yes</br>
+        valid users = [USERNAME] </br>
+        path = /home/[USERNAME]/Public</br>
+        writable = yes</br>
+        </br>
+    [readonlyshare]</br>
+        path = /home/[USERNAME]/Public</br>
+        valid users = [USERNAME] </br>
+        read only = yes</br>
+        browsable = yes</br>
+    </code>
+</div>
+<p>If you want the main user to have read-write access and others read-only, you can use the options above to specify the same shared folder with different options per user.</p>
+<p>Before enabling the Samba service, we need to add a user to access the share, use the same names for the <b>smb.conf:</b> file.</p>
+<div class="codeblock">
+    <code>
+        ~# adduser [USERNAME]</br>
+        ~# smbpasswd -a [USERNAME]</br>
+    </code>
+    </div>
+<p>Now as root we can change the permissions in order to the service to start:</p>
+<div class="codeblock">
+    <code>
+        ~# chmod +x /etc/rc.d/rc.samba</br>
+        ~# /etc/rc.d/rc.samba</br>
+    </code>
+    </div>
+<p>With SSH and Samba set on the server and a static IP address set on another machine, both connected via Ethernet and a network switch, we can finally set connection to the shared folder. This process can differ regarding Windows, Unix-likes and ChromeOS but in resume you need to make a connection to a address structured as: <strong>smb://[IP_ADDRESS]/[FOLDER_NAME]</strong> using the File Manager.</p>
+<p>This, in short, is the process to turn <b>Slackware Linux</b> into a simple file server.</p>
+
+<h2 id="4">4. Conclusion</h2>
+<p>[insert a cool and relatable call-to-action text about self-hosting here] (°-°)</p>
+
+<hr align="center" size="5" width="50%">
+<a href="#top">^ Back to top</a>
+</body>
+</html>
