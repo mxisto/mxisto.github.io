@@ -1,76 +1,76 @@
 :root{
-	padding: 5%;
+    padding: 5%;
 }
 
 body{
-	background-color: #282828;
-	color: #ebdbb2;
+    background-color: #282828;
+    color: #ebdbb2;
 }
 
 .ex_img{
-	height: auto;
-	width: -moz-available;          /* WebKit-based browsers will ignore this. */
+    height: auto;
+    width: -moz-available;          /* WebKit-based browsers will ignore this. */
     width: -webkit-fill-available;  /* Mozilla-based browsers will ignore this. */
 }
 
 h1{
-	color: #fabd2f;
+    color: #fabd2f;
 }
 
 h2{
-	color: #fabd2f;	
+    color: #fabd2f; 
 }
 
 h3{
-	text-decoration:underline;
+    text-decoration:underline;
 }
 
 strong{
-	color: #fabd2f;
+    color: #fabd2f;
 }
 
 .greek_head{
-	color: #fabd2f;
-	font-family: Copperplate, Papyrus, fantasy;
-	font-size: 22px;
+    color: #fabd2f;
+    font-family: Papyrus;
+    font-size: 22px;
 }
 
 .dictionary{
-	font-family: Copperplate, Papyrus, fantasy;
-	text-align: left; 
-	margin-left: 25%;
-	margin-right: 25%;
+    font-family: Papyrus;
+    text-align: left; 
+    margin-left: 25%;
+    margin-right: 25%;
 }
 
 a:link{
-	color: #fabd2f;
-	}
+    color: #fabd2f;
+    }
 
 a:visited{
-	color: #fabd2f;
+    color: #fabd2f;
 }
 
 a:hover{
-	color: #268cbb;
-	text-decoration: underline;
+    color: #268cbb;
+    text-decoration: underline;
 }
 
 head{
-	color: #fabd2f;
+    color: #fabd2f;
 }
 
 table{
-	border-color: rgb(0, 0, 0);
-	border-collapse: collapse;
-  	width: 100%;
-  	font-size: 18px;
+    border-color: rgb(0, 0, 0);
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 18px;
 }
 
 .table_index{
-	table{
-	border-color: rgb(0, 0, 0);
-	border-collapse: collapse;
-  	font-size: 18px;
+    table{
+    border-color: rgb(0, 0, 0);
+    border-collapse: collapse;
+    font-size: 18px;
 }
 }
 
@@ -81,14 +81,14 @@ td, th {
 }
 
 .mathbox{
-	border:1px solid white;
-	padding: 5%;
-	text-align: center;
+    border:1px solid white;
+    padding: 5%;
+    text-align: center;
 }
 
 .codeblock{
-	border:1px solid white;
-	padding: 15px;
+    border:1px solid white;
+    padding: 15px;
 }
 
 .column {
@@ -103,12 +103,12 @@ td, th {
 }
 
 .indexpage{
-	justify-content: center; 
-	align-items: center; 
-	display: flex;
-	margin-left: 10%;
-	margin-right: 10%;
-	}
+    justify-content: center; 
+    align-items: center; 
+    display: flex;
+    margin-left: 10%;
+    margin-right: 10%;
+    }
 
 .logo{
 }
@@ -127,8 +127,8 @@ td, th {
  margin-left: -45%;
  }
  .dictionary{
- 	text-align: center; 
-	margin-left: -10%;
-	margin-right: 0%
+    text-align: center; 
+    margin-left: -10%;
+    margin-right: 0%
  }
 }
