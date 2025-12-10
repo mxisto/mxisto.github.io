@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>low-end-streaming</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <link rel="stylesheet" href="main.css" />
+</head>
+<body>
+<h1 id="online-media-streaming-tips-on-low-end-hardware">Online Media
+Streaming tips on Low End Hardware</h1>
+<p><a href="../index.html">&lt;----- Back to Index</a></p>
+<hr />
+<p>Quick example on how to use low end hardware more efficiently for
+modern tasks.</p>
+<h2 id="configuration-used-in-this-example">Configuration used in this
+example:</h2>
+<p>Laptop: Samsung RV411</p>
+<ul>
+<li>Processor: Intel Pentium P6100 (Dual core, 2,00GHz)</li>
+<li>RAM: 4GB DDR3</li>
+<li>Storage: 320GB HDD</li>
+<li>System: Fedora Linux 42 XFCE</li>
+</ul>
+<h2 id="use-mpv-for-everything">Use MPV for everything</h2>
+<p>mpv can be used in conjunction with yt-dlp to stream media from
+online sources (Youtube, Odysee, Peertube, and from direct media sources
+such as webm)</p>
+<p>By default yt-dlp always gets the best quality format avaliable, but
+with a Pentium we are limited to 720p and below.</p>
+<p>For this, you can add this line to your mpv configuration file:</p>
+<hr />
+<pre><code># place this in .config/mpv/mpv.conf !
+yt-dl-format=bestvideo[height&lt;=?1080]+bestaudio/best</code></pre>
+<hr />
+<p>This does not affect the playback of local files, only online media
+since it depends on yt-dlp in order to use it.</p>
+<h2 id="for-local-streaming">For local streaming</h2>
+<p>Pretty straightforward, prefer the following formats and codecs for
+your media:</p>
+<p>720p or below x264 | MPEG-4 AVC</p>
+<hr />
+</body>
+</html>
