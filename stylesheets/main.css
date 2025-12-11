@@ -5,6 +5,7 @@
 body{
     background-color: #282828;
     color: #ebdbb2;
+    padding: inherit;
 }
 
 .ex_img{
@@ -21,8 +22,29 @@ h2{
     color: #fabd2f; 
 }
 
-h3{
+h3{ color: #fabd2f;
     text-decoration:underline;
+}
+
+h4{
+    color: #fabd2f;
+    text-decoration:underline;
+    padding: 5px;
+    font-size: 16px;
+}
+
+h5{
+    color: #fabd2f;
+    text-decoration:underline;
+    padding: 10px;
+    font-size: 16px;
+}
+
+h6{
+    color: #fabd2f;
+    text-decoration:underline;
+    padding: 15px;
+    font-size: 16px;
 }
 
 strong{
