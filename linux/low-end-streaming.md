@@ -1,5 +1,3 @@
-# Online Media Streaming tips on Low End Hardware
-
 [\<\-\-\-\-- Back to Index](../index.html)
 
 ***
