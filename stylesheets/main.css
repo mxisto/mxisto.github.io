@@ -1,10 +1,10 @@
 :root{
-    padding: 5%;
+    padding: 2%;
 }
 
 body{
-    background-color: #282828;
-    color: #ebdbb2;
+    background-image: url(pattern.jpg);
+    background-repeat: repeat;
     padding: inherit;
 }
 
@@ -15,44 +15,48 @@ body{
 }
 
 h1{
-    color: #fabd2f;
+    color: #3350F9;
 }
 
 h2{
-    color: #fabd2f; 
+    color: #3350F9; 
 }
 
-h3{ color: #fabd2f;
+h3{ color: #3350F9;
     text-decoration:underline;
 }
 
 h4{
-    color: #fabd2f;
+    color: #3350F9;
     text-decoration:underline;
     padding: 5px;
     font-size: 16px;
 }
 
 h5{
-    color: #fabd2f;
+    color: #3350F9;
     text-decoration:underline;
     padding: 10px;
     font-size: 16px;
 }
 
 h6{
-    color: #fabd2f;
+    color: #3350F9;
     text-decoration:underline;
     padding: 15px;
     font-size: 16px;
 }
 
+hr{
+    border: 1px solid darkgray;
+}
+
 strong{
-    color: #fabd2f;
+    color: #3350F9;
 }
 
 .greek_head{
-    color: #fabd2f;
+    color: #3350F9;
     font-family: Papyrus;
     font-size: 22px;
 }
@@ -65,20 +69,21 @@ strong{
 }
 
 a:link{
-    color: #fabd2f;
+    color: #3350F9;
     }
 
 a:visited{
-    color: #fabd2f;
+    color: #4700A9;
 }
 
 a:hover{
-    color: #268cbb;
-    text-decoration: underline;
+    color: #49879C;
+    text-decoration-style: wavy;
+    outline: black;
 }
 
 head{
-    color: #fabd2f;
+    color: #3350F9;
 }
 
 table{
@@ -103,9 +108,21 @@ td, th {
 }
 
 .mathbox{
-    border:1px solid white;
+    border:3px solid darkgrey;
+    border-radius: 20px;
     padding: 5%;
     text-align: center;
+    background: white;
+}
+
+.homebox{
+    border: 3px;
+    border-radius: 20px;
+    padding: 20px;
+    width: 50%;
+    margin: auto;
+    background: white;
+    border-style: inset;
 }
 
 .codeblock{
