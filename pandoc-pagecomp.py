@@ -10,9 +10,10 @@ pandoc -s -o [file].html [file].md --css=[stylesheet].css --metadata title="[nam
 import os
 import shlex
 
-root = os.getcwd()
 myfiles = []
 mydir = []
+dir_level = 0
+dir_str = str('')
 
 def show_dir():
     '''list .md files in current directory'''
@@ -43,19 +44,26 @@ def change_dir(directory):
     if directory == "":
         print(None)
     else:
-        myfiles = []
-        mydir = []
+        myfiles.clear()
+        mydir.clear()
         os.chdir(directory)
     os.system('clear')
-
+    
 def goback():
     '''goes back to last directory, separated funcion to avoid messing with the other one'''
     os.chdir("..")
     show_dir()
+    myfiles.clear()
+    mydir.clear()
+    show_dir()
 
 def pandoc(file):
     # styleshhet is hardcoded as main.css for now until I start to work with more style files
-    style_path = str(root+"/stylesheets/main.css")
+    global dir_level, dir_str
+    if dir_level == 0:
+        dir_str = str('.')
+    
+    style_path = str(dir_str+"stylesheets/main.css")
     name = str(input("Title for the page\n>> "))
     combo = str(f'pandoc -s -o {file}.html {file}.md --css=\\"{style_path}\\" --metadata title=\\"{name}\\" --mathml')
     try:
@@ -74,6 +82,16 @@ def pandoc(file):
     except:
         print ("A error ocurred in the shlex process\n%s" % a)
 
+def set_dir_level(response):
+    '''adjusts the directory level in order to corretly point to the main.css file in ./stylesheets/'''
+    global dir_level, dir_str
+    if response == 1:
+        dir_level+=1
+        dir_str+=("../")
+    else:
+        dir_level-=1
+        dir_str=dir_str[0:-3]
+
 while True:    
     print("g) goto | h) goback | p) pandoc | q)quit\n")
     show_dir()
@@ -82,8 +100,10 @@ while True:
         select = int(input("Select directory by number\n>> "))
         directory = str(mydir[select])
         change_dir(directory)
+        set_dir_level(1)
     elif option == "h":
         goback()
+        set_dir_level(0)
     elif option == "p":
         select = int(input("Select name by number\n>> "))
         file = str(myfiles[select])
