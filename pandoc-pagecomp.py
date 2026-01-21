@@ -4,7 +4,9 @@ generates a html page using pandoc.
 
 At this time being it only works on POSIX systems since it is what I use to write the site
 
-pandoc -s -o [file].html [file].md --css=[stylesheet].css --metadata title="[name]"
+pandoc -s -o [file].html [file].md --css=[stylesheet].css --metadata title="[name] --mathml"
+
+mathml is used instead of mathjax
 '''
 
 import os
