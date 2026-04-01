@@ -125,11 +125,11 @@ td, th {
 
 .homebox{
     border: 3px;
-    border-radius: 20px;
     padding: 20px;
-    width: 50%;
+    width: 75%;
+    text-align: center;
     margin: auto;
-    background: white;
+    background: snow;
     border-style: inset;
 }
 

@@ -1,5 +1,5 @@
 '''
-This script takes every image on ./files/wallpapers, 
+This script takes every image on ./files/battlestations, 
 make a thumbnail to it using imagemagik and makes a page
 with links for the original images.
 
@@ -14,7 +14,7 @@ magick mogrify -format gif -path thumbs -thumbnail 100x100 *.{jpg,png}
 import os
 import shlex
 
-html = (os.getcwd()+'/wallpaper-archive.html')
+html = (os.getcwd()+'/bst-archive.html')
 print(html)
 
 def magick(folder):
@@ -36,7 +36,7 @@ def make_links(images):
         if ('.') in i:
             temp = i.split('.')
             tmb = temp[0]
-            page.write(f'<a href="../files/wallpapers/{i}"><img src="../files/wallpapers/thumbs/{tmb}.gif"></a> ')
+            page.write(f'<a href="../files/battlestations/{i}"><img src="../files/battlestations/thumbs/{tmb}.gif"></a> ')
     print("\nPage created.\n")
 
 with open(html,"w",encoding="UTF-8") as page:
@@ -46,7 +46,7 @@ with open(html,"w",encoding="UTF-8") as page:
     <html lang="">
     <head>
         <meta charset="utf-8">
-        <title>Wallpaper Archive</title>
+        <title>Battlestation Archive</title>
         <link rel="stylesheet" type="text/css" href="../stylesheets/main.css">
         <meta name="viewport" content=
         "width=device-width, initial-scale=1.0">
@@ -56,8 +56,9 @@ with open(html,"w",encoding="UTF-8") as page:
 
     <div style="text-align: center; align-content: center;">
 
-    <div><h1>Wallpaper Archive</h1>
-    <p>Some wallpapers that I've found online or made myself.</p>
+    <div><h1>Battlestation Archive</h1>
+    <p>Some battlestations that I've found online.</p>
+    <p>There are the simple, the complex, the hoarders and the borderline schizophrenic...</p>
     <i>(Click to see the full images)</i></div>
     <br>
     <hr size="5" width="50%">
@@ -66,8 +67,8 @@ with open(html,"w",encoding="UTF-8") as page:
     
     os.chdir('..')
 
-    images_folder = (os.getcwd()+'/files/wallpapers/')
-    thumbs_folder = (os.getcwd()+'/files/wallpapers/thumbs')
+    images_folder = (os.getcwd()+'/files/battlestations/')
+    thumbs_folder = (os.getcwd()+'/files/battlestations/thumbs')
 
     make_links(images_folder)
     magick(images_folder)

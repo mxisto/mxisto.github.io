@@ -21,6 +21,7 @@ def show_dir():
     '''list .md files in current directory'''
     global myfiles, mydir
     os.system('clear')
+    helper()
     x = 0
     y = 0
     print("In directory: %s \n" % os.getcwd())
@@ -94,8 +95,10 @@ def set_dir_level(response):
         dir_level-=1
         dir_str=dir_str[0:-3]
 
+def helper():
+    print("g) goto | b) goback | p) pandoc | q) quit\n")
+
 while True:    
-    print("g) goto | h) goback | p) pandoc | q)quit\n")
     show_dir()
     option = str(input("Select a option\n>> ")).lower()
     if option == "g":
@@ -103,7 +106,7 @@ while True:
         directory = str(mydir[select])
         change_dir(directory)
         set_dir_level(1)
-    elif option == "h":
+    elif option == "b":
         goback()
         set_dir_level(0)
     elif option == "p":
