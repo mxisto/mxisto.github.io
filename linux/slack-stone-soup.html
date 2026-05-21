@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <title>Compiling DCSS in Slackware</title>
+  <title>Compiling DCSS in Slackware/SalixOS</title>
   <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
@@ -89,10 +89,9 @@
 </head>
 <body>
 <header id="title-block-header">
-<h1 class="title">Compiling DCSS in Slackware</h1>
+<h1 class="title">Compiling DCSS in Slackware/SalixOS</h1>
 </header>
 <p><a href="../index.html">&lt;----- Back to Index</a></p>
-<hr />
 <p>Building and compiling <strong>Dungeon Crawl Stone Soup</strong> with
 graphical tiles on Salix/Slackware.</p>
 <p>Things to consider regarding Slackware:</p>
@@ -118,30 +117,39 @@ them might already be installed if you decided to go for the “full”
 installation during setup.</p>
 <p>In Slack, use <a
 href="https://slackpkg.org/documentation.html">slackpkg</a>:</p>
+<div class="codeblock">
 <div class="sourceCode" id="cb1"><pre
 class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> slackpkg lua pngcrush python-pip python-PyYAML SDL2 SDL2_image</span></code></pre></div>
+</div>
 <p>In Salix, use:</p>
+<div class="codeblock">
 <div class="sourceCode" id="cb2"><pre
 class="sourceCode bash"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> slapt-get <span class="at">--install</span> lua pngcrush python-pip python-PyYAML SDL2 SDL2_image</span></code></pre></div>
+</div>
 <p>In this case, we are only downloading the packages that don’t get
 downloaded from the packaged dependencies from DCSS (see below):</p>
 <h2 id="git-instructions">Git instructions</h2>
 <p>Excerpt from <a
 href="https://github.com/crawl/crawl/blob/master/crawl-ref/INSTALL.md">DCSS’s
 installation guide</a>:</p>
-<pre><code># Clone the repository
-git clone https://github.com/crawl/crawl.git
-cd crawl
-
-# se DCSS&#39;s packaged dependencies
-git submodule update --init
-
-# Build DCSS (TILES=y builds the graphical version, -j* specifies the number of CPU cores to use in the make process)
-cd crawl-ref/source
-make -j4 TILES=y
-
-# Play DCSS by running the compiled binary
-./crawl</code></pre>
+<div class="codeblock">
+<div class="sourceCode" id="cb3"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Clone the repository</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone https://github.com/crawl/crawl.git</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> crawl</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="co"># se DCSS&#39;s packaged dependencies</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> submodule update <span class="at">--init</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Build DCSS </span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="co"># (TILES=y builds the graphical version) </span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="co"># (-j* specifies the number of CPU cores to use in the make process)</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> crawl-ref/source</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a><span class="fu">make</span> <span class="at">-j4</span> TILES=y</span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Play DCSS by running the compiled binary</span></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a><span class="ex">./crawl</span></span></code></pre></div>
+</div>
 <hr />
 </body>
 </html>

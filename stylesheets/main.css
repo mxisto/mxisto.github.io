@@ -15,36 +15,42 @@ body{
 }
 
 h1{
-    color: #3350F9;
+    color: #0A20A0;
+    font-family: courier;
+    font-weight: bold;
+    text-align: center;
+    font-size: 35px; 
 }
 
 h2{
-    color: #3350F9; 
+    color: #0A20A0;
+    font-weight: bold;
 }
 
-h3{ color: #3350F9;
-    text-decoration:underline;
+h3{ color: #0A20A0;
+    font-size: medium;
+    font-weight: bold; 
 }
 
 h4{
-    color: #3350F9;
-    text-decoration:underline;
+    color: #0A20A0;
     padding: 5px;
     font-size: 16px;
+    font-weight: bold;
 }
 
 h5{
-    color: #3350F9;
-    text-decoration:underline;
+    color: #0A20A0;
     padding: 10px;
     font-size: 16px;
+    font-weight: bold;
 }
 
 h6{
-    color: #3350F9;
-    text-decoration:underline;
+    color: #0A20A0;
     padding: 15px;
     font-size: 16px;
+    font-weight: bold;
 }
 
 hr{
@@ -52,7 +58,7 @@ hr{
 }
 
 strong{
-    color: #3350F9;
+    color: #0A20A0;
 }
 
 .greek_head{
@@ -64,12 +70,12 @@ strong{
 .dictionary{
     font-family: Papyrus;
     text-align: left; 
-    margin-left: 25%;
     margin-right: 25%;
+    margin-left: 25%;
 }
 
 a:link{
-    color: #3350F9;
+    color: #223CD4;
     }
 
 a:visited{
@@ -77,9 +83,13 @@ a:visited{
 }
 
 a:hover{
-    color: #392e7c;
-    text-decoration-style: wavy;
+    color: #001C82;
+    text-decoration-style: double;
     outline: black;
+}
+
+p {
+  padding: 5px;
 }
 
 head{
@@ -107,6 +117,11 @@ td, th {
   padding: 8px;
 }
 
+img {
+    max-width:100%;
+    height: auto;
+}
+
 .mathbox{
     border:3px solid darkgrey;
     border-radius: 20px;
@@ -126,16 +141,22 @@ td, th {
 .homebox{
     border: 3px;
     padding: 20px;
-    width: 75%;
-    text-align: center;
     margin: auto;
-    background: snow;
-    border-style: inset;
+    width: 75%;
+    background: whitesmoke;
+    border-style: groove;
+    border-top-width: thick;
 }
 
 .codeblock{
     border:1px solid white;
-    padding: 15px;
+    padding: 10px;
+    background: snow;
+    border-style: groove;
+    border-top-width: thick;
+    border-right-width: thick;
+    border-left-width: thick;
+    border-bottom-width: thick;
 }
 
 .column {

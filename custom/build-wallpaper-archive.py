@@ -21,7 +21,7 @@ def magick(folder):
     os.chdir('..')
     print("Converting images to thumbnails...")
     os.chdir(folder)
-    combo = str("magick mogrify -format gif -path thumbs -thumbnail 200x200 *.{jpg,png,jpeg}")
+    combo = str("magick mogrify -path thumbs -resize 200x200^ -gravity center -extent 200x200  *.{jpg,png,jpeg}")
     try:
         args = shlex.split(combo, posix=True)
         a=' '.join(args)

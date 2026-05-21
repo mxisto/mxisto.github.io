@@ -7,7 +7,7 @@ Books that I have been reading (or will read in the future)...
 
 This list is organized with the **Dewey Decimal Classification (DDC)** system.
 
-![](../images/webbuttons/underconstruction.gif)
+<center>![](../images/webbuttons/underconstruction.gif)</center>
 
 # Index
 
@@ -61,4 +61,4 @@ This list is organized with the **Dewey Decimal Classification (DDC)** system.
 
 ***
 
-![](../images/webbuttons/underconstruction.gif)
+<center>![](../images/webbuttons/underconstruction.gif)</center>

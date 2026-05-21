@@ -64,7 +64,7 @@ def pandoc(file):
     # styleshhet is hardcoded as main.css for now until I start to work with more style files
     global dir_level, dir_str
     if dir_level == 0:
-        dir_str = str('.')
+        dir_str = str('')
     
     style_path = str(dir_str+"stylesheets/main.css")
     name = str(input("Title for the page\n>> "))

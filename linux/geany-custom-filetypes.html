@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <title>Online Media Streaming on Low End Hardware</title>
+  <title>Geany for Rmarkdown (and other filetypes)</title>
   <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
@@ -89,41 +89,70 @@
 </head>
 <body>
 <header id="title-block-header">
-<h1 class="title">Online Media Streaming on Low End Hardware</h1>
+<h1 class="title">Geany for Rmarkdown (and other filetypes)</h1>
 </header>
 <p><a href="../index.html">&lt;----- Back to Index</a></p>
-<p>Quick example on how to use low end hardware more efficiently for
-modern tasks.</p>
-<h2 id="configuration-used-in-this-example">Configuration used in this
-example:</h2>
-<p>Laptop: Samsung RV411</p>
-<ul>
-<li>Processor: Intel Pentium P6100 (Dual core, 2,00GHz)</li>
-<li>RAM: 4GB DDR3</li>
-<li>Storage: 320GB HDD</li>
-<li>System: Fedora Linux 42 XFCE</li>
-</ul>
-<h2 id="use-mpv-for-everything">Use MPV for everything</h2>
-<p>mpv can be used in conjunction with yt-dlp to stream media from
-online sources (Youtube, Odysee, Peertube, and from direct media sources
-such as webm)</p>
-<p>By default yt-dlp always gets the best quality format avaliable, but
-with a Pentium we are limited to 720p and below.</p>
-<p>For this, you can add this line to your mpv configuration file:</p>
+<center>
+<img src="../images/webbuttons/geany-web-button.gif" /> <img
+src="../images/webbuttons/rmarkdown.png" />
+</center>
+<p><br></br></p>
+<p><a href="https://www.geany.org">Geany</a> is a great and lightweight
+IDE that provides good support for a great selection of filetypes.
+However for more specific types of files such as Rmarkdown (.rmd) there
+are not such options as default, so in this case we need to set our own
+build instructions.</p>
+<p>Luckily Geany supports custom build instructions for know and unknown
+filetypes. I use it for building HTML pages from Rmarkdown for this
+website.</p>
+<p><strong>In this example we will see how to set a custom command for
+building web pages from Rmarkdown:</strong></p>
+<p>First I assume that you already installed <a
+href="https://www.r-project.org/">R</a> in your system and installed the
+<strong>rmarkdown</strong> package via <strong>R</strong> as
+superuser.</p>
+<p>Then we will open an .rmd file. On the upper menu, go to
+<strong>Build –&gt; Define Build Commands…</strong>:</p>
+<center>
+<img src="../images/tutorials/geany/geany-build-0.jpg" />
+</center>
+<p><br></br> In the specific case of Rmarkdown, I need to compile it
+using an specific command:</p>
 <div class="codeblock">
 <div class="sourceCode" id="cb1"><pre
-class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># place this in .config/mpv/mpv.conf</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ex">yt-dl-format=bestvideo[height</span><span class="op">&lt;</span>=<span class="pp">?</span>1080]+bestaudio/best</span></code></pre></div>
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">Rscript</span> <span class="at">-e</span> <span class="st">&quot;rmarkdown::render( &#39;%f&#39;, output_format=&#39;html_document&#39;)&quot;</span></span></code></pre></div>
 </div>
-<p>This does not affect the playback of local files, only online media
-since it depends on yt-dlp in order to use it.</p>
-<h2 id="for-local-streaming">For local streaming</h2>
-<p>Pretty straightforward, prefer the following formats and codecs for
-your media:</p>
+<p>For creating other outputs (i.e. PDFs), it’s just the case of
+replacing the output value in <code>output_format=[...]</code>.</p>
+<p>The substitutes are important! According to <a
+href="https://wiki.geany.org/howtos/configurebuildmenu">Geany
+documentation</a>:</p>
 <ul>
-<li>720p or below</li>
-<li>x264 | MPEG-4 AVC</li>
+<li><strong>%f</strong> - replaced by the filename of the file selected
+in the editor when the menu item is selected.</li>
+<li><strong>%e</strong> - replaced by the same filename but without the
+last extension.</li>
+<li><strong>%d</strong> - replaced by the absolute path of the directory
+of the file selected in the editor when the menu item is selected.</li>
+<li><strong>%p</strong> - replaced by the absolute path of the base
+directory of the currently open project.</li>
 </ul>
+<p>So this command will always run in the working directory in order to
+read the files needed, they will show up in the <strong>Build</strong>
+upper menu as options. In this situation I’ve put them in the default
+function keys for quick access (F8 for PDFs, F9 for webpages).</p>
+<center>
+<img src="../images/tutorials/geany/geany-build-1.jpg" style="width:800px;"/>
+</center>
+<p><br></br> So when you run it, the message will be sent to the
+compiler textbox like if you were to compile any other program.</p>
+<p><em><strong>Tip: If you’re using a standalone compiler binary
+(i.e. FreePascal’s fpc), you can write the file’s location (in an
+absolute path) directly into the command box.</strong></em></p>
 <hr />
+<p>Other editors like <strong>Vim</strong> also have the ability to set
+custom commands and bind them into keys. However if you prefer the
+middle ground between an text editor and a full bloated IDE, Geany is a
+good option for that.</p>
 </body>
 </html>
