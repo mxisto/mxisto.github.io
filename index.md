@@ -10,6 +10,7 @@ output:
 
 <center>
 
+<p class="greek_head">σχιστός (schízein) | schistós | skhistos | xisto</p>
 
 ::: dictionary
 1. *(Greek) "cloven," "divided," or "that may be split or cleft"*
