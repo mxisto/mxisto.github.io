@@ -25,25 +25,33 @@ repositories [here.](https://github.com/mxisto)
 </center>
 
 ::: homebox
-## Linux
-<p><a href="./linux/low-end-streaming.html">Online Media Streaming tips on Low End Hardware</a></p>
-<p><a href="./linux/slack_server_guide.html">Simple NAS with Slackware Linux</a></p>
-<p><a href="./linux/slack-stone-soup.html">Building and compiling Dungeon Crawl Stone Soup with graphical tiles on Salix/Slackware</a></p>
-### Software
-[Using Geany custom build commands for Rmarkdown and other filetypes](./linux/geany-custom-filetypes.html)
+## ~$ Linux
+- <p><a href="./linux/low-end-streaming.html">Online Media Streaming tips on Low End Hardware</a></p>
+- <p><a href="./linux/slack_server_guide.html">Simple NAS with Slackware Linux</a></p>
+- <p><a href="./linux/slack-stone-soup.html">Building and compiling Dungeon Crawl Stone Soup with graphical tiles on Salix/Slackware</a></p>
+
+### >> Troubleshooting
+- [Fixing missing screen resolutions using xrandr](./linux/xrandr-fix.html)
+
+### >> Software
+- [Using Geany custom build commands for Rmarkdown and other filetypes](./linux/geany-custom-filetypes.html)
+
+---
 
 ## Math
-<p><a href="./math/equality_principle.html">Equality Principle</a></p>
-<p><a href="./math/equivalent_fractions.html">Equivalent Fractions</a></p>
-<p><a href="./math/system_of_equations.html">Systems of Equations</a></p>
+- <p><a href="./math/equality_principle.html">Equality Principle</a></p>
+- <p><a href="./math/equivalent_fractions.html">Equivalent Fractions</a></p>
+- <p><a href="./math/system_of_equations.html">Systems of Equations</a></p>
 ### Operational Research
-<a href="./math/operational-research/operational-research-index.html">Operational Research - Exercises</a>
+- <a href="./math/operational-research/operational-research-index.html">Operational Research - Exercises</a>
+
+---
 
 ## Misc.
-<p><a href="./custom/ascii_gallery.html">ASCII Gallery</a></p>
-<p><a href="./books/books-list.html">My book list (WIP)</a></p>
-<p><a href="./custom/bst-archive.html">Battlestations Archive</a></p>
-<p><a href="./custom/wallpaper-archive.html">My Wallpaper Archive</a></p>
+- <p><a href="./custom/ascii_gallery.html">ASCII Gallery</a></p>
+- <p><a href="./books/books-list.html">My book list (WIP)</a></p>
+- <p><a href="./custom/bst-archive.html">Battlestations Archive</a></p>
+- <p><a href="./custom/wallpaper-archive.html">My Wallpaper Archive</a></p>
 :::
 ---
 
@@ -80,7 +88,6 @@ the future):
   <a href="https://linuxmint.com/"><img src="images/webbuttons/salix.gif"></a>
   <a href="https://pandoc.org"><img src="images/webbuttons/pandoc.gif" height="31"></a>
   <a href="https://www.devuan.org/"><img src="images/webbuttons/devuan-logo.gif"></a>
-  <a href="https://www.gog.com"><img src="images/webbuttons/gog.jpg" height="31"></a>
   <a href="https://geany.org/"><img src="images/webbuttons/geany-web-button.gif"></a>
   <a href="https://rmarkdown.rstudio.com/"><img src="images/webbuttons/rmarkdown.png"></a>
   <a href="https://i3wm.org/"><img src="images/webbuttons/i3wm.png"></a>

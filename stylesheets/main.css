@@ -62,7 +62,7 @@ strong{
 }
 
 .greek_head{
-    color: #3350F9;
+    color: darkblue;
     font-family: Papyrus;
     font-size: 22px;
 }
@@ -157,6 +157,7 @@ img {
     border-right-width: thick;
     border-left-width: thick;
     border-bottom-width: thick;
+    font-weight: bold;
 }
 
 .column {
