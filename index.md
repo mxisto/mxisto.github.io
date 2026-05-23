@@ -65,7 +65,7 @@ the future):
 [Qalculate!](https://qalculate.github.io/) | [GitHub Pages](https://pages.github.com/)
 </center>
 
-::: {style="text-align: center;"}
+<center>
 <div>
 
   <img src="images/webbuttons/learnhtml.gif" width="88" height="31" alt="">
@@ -88,11 +88,11 @@ the future):
   <a href="https://xfce.org/"><img src="images/webbuttons/xfce.png"></a>
   <a href="https://vscodium.com/"><img src="images/webbuttons/vscode.gif"></a>
 
-</div>
+[![](images/webbuttons/gog.jpg)](https://www.gog.com)
 
 <div>
 
 [![](images/webbuttons/slacklogo2.jpg)](http://www.slackware.com/)
 
 </div>
-:::
+</center>
