@@ -46,6 +46,12 @@ h5{
     font-weight: bold;
 }
 
+.nt{
+    width: 50%;
+    font-size: 13px;
+    color:#3A3A3A;
+}
+
 h6{
     color: #0A20A0;
     padding: 15px;
@@ -183,6 +189,13 @@ img {
 }
 
 .pagelist{
+}
+
+figcaption{
+    text-align: center;
+    width: 50%;
+    font-size: 14px;
+    color:#3A3A3A;
 }
 
 @media screen and (max-width : 906px){

@@ -67,7 +67,12 @@ def pandoc(file):
         dir_str = str('')
     
     style_path = str(dir_str+"stylesheets/main.css")
-    name = str(input("Title for the page\n>> "))
+    filename = str(file+".md")
+    with open(filename,'r') as fl:
+        lines = fl.readlines()
+        for line in lines:
+            if "title:" in line:
+                name = str(line[7:])
     combo = str(f'pandoc -s -o {file}.html {file}.md --css=\\"{style_path}\\" --metadata title=\\"{name}\\" --mathml')
     try:
         args = shlex.split(combo, posix=True)
