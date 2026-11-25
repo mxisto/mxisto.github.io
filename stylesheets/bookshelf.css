@@ -1,0 +1,79 @@
+:root{
+    padding: 2%;
+}
+
+bookshelf{
+/*
+    background-image: url(pattern.jpg);
+    background-repeat: repeat;
+*/
+/*
+    padding: inherit;
+*/
+    }
+
+category{
+    display: block;
+    width: fit-content;
+    font-size: x-large;
+    font-family: fantasy;
+    color: crimson;
+}
+
+subcategory{
+    display: block;
+    width: fit-content;
+    font-family: serif;
+    color: crimson;
+    font-weight: bold;
+}
+
+book{
+    font-weight: bold;
+    display: block;
+    border:3px solid darkgrey;
+    border-radius: 20px;
+    padding: 2%;
+    text-align: left;
+    background: white;
+    border-bottom: outset;
+    margin: 20px;
+    width: fit-content;
+    }
+
+title{
+    color: #0A20A0;
+    font-family: serif;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 10px;  
+    }
+
+author{
+    color: black;
+    font-family: sans-serif;
+    font-weight: normal;
+    display: block;
+    margin-bottom: 10px;
+    padding-left: 20px;  
+    }
+    
+year{
+    color: black;
+    font-family: sans-serif;
+    font-style: italic;
+    display: block;
+    margin-bottom: 10px;
+    padding-left: 20px;  
+}
+
+img{
+    width:150px;
+}
+
+@media screen and (max-width : 906px){
+    book{
+        text-align: center;
+        width: auto;
+    }
+}

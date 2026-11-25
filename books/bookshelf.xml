@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/css" href="../stylesheets/bookshelf.css"?>
+<?xml-stylesheet type="text/xsl" href="bookshelf.xsl"?>
+<bookshelf xmlns:html="http://www.w3.org/1999/xhtml">
+    
+    <category>D - History (General)</category>
+    <subcategory>D111-203 - Medieval history</subcategory>
+    <book>
+        <title>Heróis e Maravilhas da Idade Média</title>
+        <author>Jacques Le Goff</author>
+        <cover><html:img src="../images/book-covers/jacques-legoff-idade-media.jpg"></html:img></cover>
+    </book>
+    
+    <category>T - Technology</category>
+    <subcategory>TK7885-7895 - Computer engineering. Computer hardware</subcategory>
+    <book>
+        <title>Introdução à Organização de Computadores (3ª Edição)</title>
+        <author>Mário A. Monteiro</author>
+        <year>1996</year>
+        <cover><html:img src="../images/book-covers/intro-org-comp-3ed.jpg"></html:img></cover>
+    </book>
+    
+    <book>
+        <title>Lógica de Programação: A construção de algoritmos e estruturas de dados (3ª Edição)</title>
+        <author>André L. V. Forbellone, Henri F. Ebespächer</author>
+        <year>2005</year>
+        <cover><html:img src="../images/book-covers/log-prog-3ed.jpeg"></html:img></cover>
+    </book>
+    
+    <book>
+        <title>XML: Aplicações Práticas</title>
+        <author>Osmar J. Silva</author>
+        <year>2001</year>
+    </book>
+    
+</bookshelf>
